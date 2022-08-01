@@ -1,0 +1,175 @@
+@import '../../config';
+
+nav.layout-navigation {
+   position: relative;
+
+   section.nav-strap {
+      background: royalblue;
+      @include Flex(fe, c);
+      padding: .25em .5em;
+      font-size: 1.2rem;
+      color: $clr-white;
+      height: 45px;
+
+      ul {
+         display: flex;
+         list-style: none;
+
+         li {
+            margin-left: 2em;
+            font-size: .9rem;
+            font-family: 'Prompt', sans-serif;
+            font-weight: 300;
+            cursor: pointer;
+            transition: .2s;
+
+            &:hover {
+               transform: scale(1.075);
+            }
+         }
+      }
+
+      figure {
+         height: 100%;
+         margin-left: 2em;
+         overflow: hidden;
+
+         img {
+            height: 100%;
+         }
+      }
+   }
+
+   main.nav-main-content {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      background: rgb(245, 245, 245);
+      padding: .75em 1em .5em 1em;
+      height: 85px;
+      @include Flex(none, c);
+
+      section {
+         height: 100%;
+
+         &.search-container {
+            width: 36%;
+            height: 90%;
+            display: flex;
+            
+            div {
+               width: 10%;
+               aspect-ratio: 1;
+               background: orangered;
+               color: $clr-white;
+               @include Flex(c, c);
+
+               svg {
+                  width: 50%;
+                  height: 50%;
+               }
+            }
+
+            input {
+               width: 90%;
+               border: 3px solid orangered;
+               background: rgb(247, 246, 246);
+               outline: 0;
+               padding: 0 1em;
+               border-right: 0;
+               border-radius: .2em 0 0 .2em;
+               font-family: 'Prompt', sans-serif;
+               font-weight: 500;
+
+               &::placeholder {
+                  text-transform: uppercase;
+                  font-size: .9rem;
+                  opacity: .5;
+               }
+            }
+         }
+
+         &.left-content {
+            width: 32%;
+            @include Flex(none, c);
+
+            div.menu-icon {
+               position: relative;
+               width: 10%;
+               aspect-ratio: 1;
+               cursor: pointer;
+
+               $tops: (
+                  1: '10%',
+                  2: '50%',
+                  3: '90%'
+               );
+               
+               span {
+                  position: absolute;
+                  left: 0;
+                  width: 100%;
+                  pointer-events: none;
+                  height: 3px;
+                  background: $clr-black;
+                  transition: .4s;
+
+                  @each $i, $x in $tops {
+                     &:nth-child(#{$i}) {
+                        top: #{$x};
+                     }
+                  }
+               }
+            }
+         }
+
+         &.right-content {
+            width: 32%;
+            @include Flex(fe, c);
+
+            section.nav-icon {
+               width: 15%;
+               @include Flex(c, c);
+               flex-direction: column;
+               margin-left: .75em;
+               cursor: pointer;
+               position: relative;
+
+               h6 {
+                  @include Rectangle(20px);
+                  @include Flex(c, c);
+                  font-size: .8rem;
+                  font-weight: 600;
+                  font-family: 'Prompt', sans-serif;
+                  position: absolute;
+                  left: -2px;
+                  border-radius: 50%;
+                  border: 2px solid crimson;
+                  top: -2px;
+               }
+
+               h5.text-label{
+                  font-weight: 500;
+                  font-family: 'Prompt', sans-serif;
+                  font-size: .8rem;
+                  margin-top: .5em;
+                  text-transform: uppercase;
+               }
+
+               svg {
+                  width: 70px;
+                  height: 70px;
+                  transition: .3s;
+                  display: block;
+               }
+
+               &:hover {
+                  svg {
+                     transform: scale(1.15);
+                     color: royalblue;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,56 @@
+@import '../../config';
+
+section.slider-container {
+   height: 65vh;
+   // overflow: hidden;
+   position: relative;
+
+   section.slider-buttons-container {
+      position: absolute;
+      z-index: 2;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      
+      div {
+         @include Rectangle(15px);
+         border-radius: 50%;
+         margin: 0 .5em;
+         border: 1px solid royalblue;
+         background: whitesmoke;
+         cursor: pointer;
+         transition: .3s;
+
+         &.active {
+            background: royalblue;
+            transform: scale(1.2);
+            pointer-events: none;
+         }
+
+         &:hover {
+            transform: scale(1.1);
+         }
+      }
+   }
+
+   div.moving-section {
+      display: flex;
+      height: inherit;
+      transform: translateX(-100%);
+      transition: .3s;
+
+      figure {
+         flex-shrink: 0;
+         width: 100%;
+         height: 100%;
+
+         img {
+            @include FullSize;
+            object-fit: cover;
+            object-position: bottom;
+         }
+      }
+
+   }
+}
