@@ -1,40 +1,49 @@
 import React from 'react'
-import { IoMdArrowDropright } from 'react-icons/io'
 import { NavAsideListType } from '../../../../interfaces/HomepageInterfaces'
 import AsideList from './AsideList'
+import CategoryHiddenContent from './CategoryHiddenContent'
+import itemTypes from '../../../../data/categoryItems.json'
 
 const CategoryAside = () => {
    const asideList: NavAsideListType[] = [
       {
-         outerDiv: { category: 'PCs' }
+         category: 'PCs',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.pc } />
       },
 
       {
-         outerDiv: { category: 'Phones' }
+         category: 'Phones',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.phone } />
       },
 
       {
-         outerDiv: { category: 'Laptops' }
+         category: 'Laptops',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.laptop } />
       },
 
       {
-         outerDiv: { category: 'Keyboards' }
+         category: 'Keyboards',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.keyboard } />
       },
 
       {
-         outerDiv: { category: 'Mouses' }
+         category: 'Mouses',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.mouse } />
       },
 
       {
-         outerDiv: { category: 'Headphones' }
+         category: 'Headphones',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.headphone } />
       },
 
       {
-         outerDiv: { category: 'Components' }
+         category: 'Components / Accessories',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.other } />
       },
 
       {
-         outerDiv: { category: 'Accessories' }
+         category: 'Home appliances',
+         hiddenContent: <CategoryHiddenContent itemsLists={ itemTypes.household } />
       }
    ]
 

@@ -1,0 +1,151 @@
+@import '../../config';
+
+section.products-row {
+   background: #FFFFFF;
+   border-radius: 1em;
+   @include MarginCenter(98%);
+   padding: 1em 0;
+   margin-top: $space;
+
+   div.text-wrap {
+      @include Flex(sb, c);
+      margin-bottom: 1.5em;
+      padding: 0 2em;
+
+      h2 {
+         &.left {
+            font-weight: 600;
+            font-size: 1.3rem;
+            font-family: 'Prompt', sans-serif;
+         }
+
+         &.right {
+            @include Flex(c, c);
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: .2s;
+
+            span {
+               @include Rectangle(20px);
+               margin-left: .5em;
+
+               svg {
+                  @include FullSize;
+               }
+            }
+
+            &:hover {
+               color: royalblue;
+            }
+         }
+      }
+   }
+
+   section.wrap {
+      @include Flex(sb, c);
+      height: inherit;
+      padding: 0 1em;
+
+      div.arrow {
+         width: max-content;
+         cursor: pointer;
+
+         span {
+            display: block;
+            @include Rectangle(25px);
+            transition: .4s;
+            pointer-events: none;
+
+            svg { @include FullSize; }
+         }
+
+         &:hover span {
+            transform: scale(1.5);
+         }
+      }
+   }
+
+   section.product-cont {
+      display: flex;
+      width: 95%;
+      overflow: scroll;
+      overflow-y: hidden;
+      @include ScrolLXStyle;
+
+      article.row-product {
+         width: 20%;
+         aspect-ratio: 1;
+         border: 1px solid black;
+         border-radius: .15em;
+         @include Flex(sb, none);
+         flex-direction: column;
+         padding: .5em;
+         margin-bottom: 1em;
+         transition: .5s;
+         cursor: pointer;
+
+         div.wrap {
+            height: 50%;
+            @include Flex(sb, none);
+            flex-direction: column;
+         }
+
+         &:not(:last-child) { margin-right: 2em; }
+
+         h5 {
+            &.name {
+               font-size: .9rem;
+               text-transform: uppercase;
+               font-weight: 500;
+            }
+
+            &.price {
+               font-size: 1.5rem;
+               font-weight: 600;
+               font-family: 'Prompt', sans-serif;
+            }
+         }
+
+         figure {
+            height: 45%;
+            overflow: hidden;
+            margin: 0 auto;
+            transition: .5s;
+
+            img {
+               height: 100%;
+            }
+         }
+
+         div.product-stars-container {
+            @include Flex(none, c);
+
+            h6 {
+               color: orange;
+               font-weight: 600;
+               margin-right: .25em;
+               font-size: 1.3rem;
+               text-shadow: 0 0 1px black;
+            }
+
+            span {
+               @include Rectangle(25px);
+               
+               svg {
+                  @include FullSize;
+               }
+
+               &.active {
+                  color: orange;           
+               }
+            }
+         }
+
+         &:hover {
+            figure { transform: scale(1.2); }
+            background: darken($color: #FFFFFF, $amount: 5%);
+         }
+      }
+   }
+}

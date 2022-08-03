@@ -5,6 +5,8 @@ $backgroundClr: rgb(235, 235, 235);
 $clr-white: rgb(242, 238, 238);
 $clr-black: rgb(21, 21, 21);
 
+$space: 5em;
+
 // ######################################################
 
 @mixin FullSize {
@@ -15,6 +17,11 @@ $clr-black: rgb(21, 21, 21);
 @mixin Rectangle($height) {
    height: $height;
    aspect-ratio: 1;
+}
+
+@mixin MarginCenter($numWidth) {
+   width: $numWidth;
+   margin: 0 auto;
 }
 
 // ################### FLEX ##############################
@@ -39,3 +46,17 @@ $clr-black: rgb(21, 21, 21);
 }
 
 // ######################################################
+
+@mixin ScrolLXStyle {
+   &::-webkit-scrollbar {
+      height: 10px;
+      border-radius: 1em;
+      background-color: $clr-black;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      height: 90%;
+      border-radius: 1em;
+      background: royalblue;
+   }
+}

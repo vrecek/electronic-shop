@@ -5,7 +5,6 @@ export interface CategoryNavListType extends NavigationLinkType {
 }
 
 export interface NavAsideListType {
-   outerDiv: {
-      category: string
-   }
+   category: string,
+   hiddenContent: JSX.Element
 }

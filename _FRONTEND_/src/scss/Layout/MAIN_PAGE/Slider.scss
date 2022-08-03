@@ -1,8 +1,8 @@
 @import '../../config';
 
-section.slider-container {
+header.slider-container {
    height: 65vh;
-   // overflow: hidden;
+   overflow: hidden;
    position: relative;
 
    section.slider-buttons-container {
@@ -49,6 +49,15 @@ section.slider-container {
             @include FullSize;
             object-fit: cover;
             object-position: bottom;
+         }
+
+         &:nth-child(3) img {
+            object-position: 50% 50%;
+         }
+
+         &:nth-child(4) img,
+         &:nth-child(1) {
+            object-position: top;
          }
       }
 

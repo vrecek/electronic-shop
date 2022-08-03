@@ -1,0 +1,444 @@
+{
+   "pc": [
+      [
+         {
+            "name": "Computers",
+            "url": "/"
+         },
+
+         {
+            "name": "Gaming PCs",
+            "url": "/"
+         },
+
+         {
+            "name": "iMacs",
+            "url": "/"
+         },
+
+         {
+            "name": "PCs for work",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Lights",
+            "url": "/"
+         },
+
+         {
+            "name": "Case lights",
+            "url": "/"
+         }
+      ]
+   ],
+
+   "phone": [
+      [
+         {
+            "name": "Smartphones",
+            "url": "/"
+         },
+
+         {
+            "name": "iPhone",
+            "url": "/"
+         },
+
+         {
+            "name": "Samsung",
+            "url": "/"
+         },
+
+         {
+            "name": "Xiaomi",
+            "url": "/"
+         },
+
+         {
+            "name": "Huawei",
+            "url": "/"
+         },
+
+         {
+            "name": "Sony",
+            "url": "/"
+         },
+
+         {
+            "name": "LG",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Keypad phones",
+            "url": "/"
+         },
+
+         {
+            "name": "Motorola",
+            "url": "/"
+         },
+
+         {
+            "name": "Nokia",
+            "url": "/"
+         },
+
+         {
+            "name": "LG",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Other",
+            "url": "/"
+         },
+
+         {
+            "name": "With slide-out keyboard",
+            "url": "/"
+         },
+
+         {
+            "name": "Tablets",
+            "url": "/"
+         }
+      ]
+   ],
+
+   "laptop": [
+      [
+         {
+            "name": "Laptops",
+            "url": "/"
+         },
+
+         {
+            "name": "Gaming laptops",
+            "url": "/"
+         },
+
+         {
+            "name": "Office laptops",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Brands",
+            "url": "/"
+         },
+
+         {
+            "name": "Macs",
+            "url": "/"
+         },
+
+         {
+            "name": "Lenovo",
+            "url": "/"
+         },
+
+         {
+            "name": "Asus",
+            "url": "/"
+         },
+
+         {
+            "name": "Dell",
+            "url": "/"
+         },
+
+         {
+            "name": "Acer",
+            "url": "/"
+         },
+
+         {
+            "name": "MSI",
+            "url": "/"
+         }
+      ]
+   ],
+
+   "keyboard": [
+      [
+         {
+            "name": "Keyboards",
+            "url": "/"
+         },
+
+         {
+            "name": "Membrane keyboards",
+            "url": "/"
+         },
+
+         {
+            "name": "Mechanical keyboards",
+            "url": "/"
+         },
+
+         {
+            "name": "LED keyboards",
+            "url": "/"
+         }
+      ]
+   ],
+
+   "mouse": [
+      [
+         {
+            "name": "Types",
+            "url": "/"
+         },
+
+         {
+            "name": "Wireless mouses",
+            "url": "/"
+         },
+
+         {
+            "name": "Wired mouses",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Brands",
+            "url": "/"
+         },
+
+         {
+            "name": "Logitech",
+            "url": "/"
+         },
+
+         {
+            "name": "Razer",
+            "url": "/"
+         },
+
+         {
+            "name": "Steelseries",
+            "url": "/"
+         }
+      ]
+   ],
+
+   "headphone": [
+      [
+         {
+            "name": "Types",
+            "url": "/"
+         },
+
+         {
+            "name": "Wireless headphones",
+            "url": "/"
+         },
+
+         {
+            "name": "Wired headphones",
+            "url": "/"
+         },
+
+         {
+            "name": "Bluetooth",
+            "url": "/"
+         },
+
+         {
+            "name": "On battery",
+            "url": "/"
+         },
+
+         {
+            "name": "iPods",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Brands",
+            "url": "/"
+         },
+
+         {
+            "name": "Sony",
+            "url": "/"
+         },
+
+         {
+            "name": "Apple",
+            "url": "/"
+         },
+
+         {
+            "name": "JBL",
+            "url": "/"
+         },
+
+         {
+            "name": "Steelseries",
+            "url": "/"
+         },
+
+         {
+            "name": "Razer",
+            "url": "/"
+         }
+      ]
+   ],
+
+   "household": [
+      [
+         {
+            "name": "Equipment",
+            "url": "/"
+         },
+
+         {
+            "name": "TVs",
+            "url": "/"
+         },
+
+         {
+            "name": "Radios",
+            "url": "/"
+         },
+
+         {
+            "name": "Routers",
+            "url": "/"
+         },
+
+         {
+            "name": "Speakers",
+            "url": "/"
+         },
+
+         {
+            "name": "Digitial clocks",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Kitchen equipment",
+            "url": "/"
+         },
+
+         {
+            "name": "Microwaves",
+            "url": "/"
+         },
+
+         {
+            "name": "Fridges",
+            "url": "/"
+         }
+      ]
+   ],
+
+   "other": [
+      [
+         {
+            "name": "Components",
+            "url": "/"
+         },
+
+         {
+            "name": "Graphic cards",
+            "url": "/"
+         },
+
+         {
+            "name": "Processors",
+            "url": "/"
+         },
+
+         {
+            "name": "RAM",
+            "url": "/"
+         },
+
+         {
+            "name": "HDD",
+            "url": "/"
+         },
+
+         {
+            "name": "SSD",
+            "url": "/"
+         },
+
+         {
+            "name": "Power supply",
+            "url": "/"
+         },
+
+         {
+            "name": "Cables",
+            "url": "/"
+         },
+
+         {
+            "name": "SSD",
+            "url": "/"
+         },
+
+         {
+            "name": "Fans",
+            "url": "/"
+         },
+
+         {
+            "name": "Motherboards",
+            "url": "/"
+         }
+      ],
+
+      [
+         {
+            "name": "Accessories",
+            "url": "/"
+         },
+
+         {
+            "name": "Sony",
+            "url": "/"
+         },
+
+         {
+            "name": "Apple",
+            "url": "/"
+         },
+
+         {
+            "name": "JBL",
+            "url": "/"
+         },
+
+         {
+            "name": "Steelseries",
+            "url": "/"
+         },
+
+         {
+            "name": "Razer",
+            "url": "/"
+         }
+      ]
+   ]
+}

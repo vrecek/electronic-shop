@@ -2,7 +2,7 @@
 
 section.category-section {
    display: flex;
-   margin-bottom: .5em;
+   margin-bottom: 1em;
 
    aside.categories-aside {
       width: 22%;
@@ -15,6 +15,8 @@ section.category-section {
       }
 
       ul.first-list {
+         position: relative;
+         
          li {
             &.outer-li {
                padding: .5em 1em;
@@ -33,7 +35,10 @@ section.category-section {
 
                &:hover {
                   background: royalblue;
-                  color: $clr-white;
+
+                  div.outer-div { color: $clr-white; }
+
+                  section.hidden-nav-category-content { display: flex; }
                }
             }
          }
