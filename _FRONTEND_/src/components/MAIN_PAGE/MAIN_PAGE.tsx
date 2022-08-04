@@ -6,7 +6,10 @@ import CategorySection from './CategorySection/CategorySection'
 import SliderContainer from './Slider/SliderContainer'
 import item from '../../images/prod1.png'
 import ProductsCategorySection from '../Common/Products/Category/ProductsCategorySection'
-import cats from '../../data/possibleCategoriesSection.json'
+import minorCats from '../../data/productCategories.json'
+import ZoneSection from '../Common/Products/Zone/ZoneSection'
+import { getCategory, getCommonCategory } from '../../functions/getCategory'
+import LayoutFooter from '../Layout/Footer/LayoutFooter'
 
 const MAIN_PAGE = () => {
    const recommendedProducts: HomepageProductType[] = [
@@ -81,7 +84,9 @@ const MAIN_PAGE = () => {
          price: 99
       },
    ]
-   const possibleCategories: PossibleHomepageCategory[] = [...Array(1)].map(x => cats[Math.floor(Math.random() * cats.length)] as PossibleHomepageCategory)
+
+   const possibleCategories: PossibleHomepageCategory[] = getCommonCategory(2)
+   const categories: string[] = getCategory(3)
 
    return (
       <main className="main-page">
@@ -103,10 +108,50 @@ const MAIN_PAGE = () => {
 
          <ProductsCategorySection 
             products={ recommendedProducts }
+            category={ possibleCategories[1] }
+         />
+
+         <ZoneSection
             category={ possibleCategories[0] }
          />
 
-         <div style={{height:'500vh'}}>xd</div>
+         <ProductsRow 
+            text={ categories[0] }
+            rightSection={{
+               text: 'See more',
+               url: '/'
+            }}
+            products={ recommendedProducts }
+         />
+
+         <ProductsRow 
+            text={ categories[1] }
+            rightSection={{
+               text: 'See more',
+               url: '/'
+            }}
+            products={ recommendedProducts }
+         />
+
+         <ProductsCategorySection 
+            products={ recommendedProducts }
+            category={ possibleCategories[0] }
+         />
+
+         <ProductsRow 
+            text={ categories[2] }
+            rightSection={{
+               text: 'See more',
+               url: '/'
+            }}
+            products={ recommendedProducts }
+         />
+
+         <ZoneSection
+            category={ possibleCategories[1] }
+         />       
+
+         <LayoutFooter />
 
       </main>
    )

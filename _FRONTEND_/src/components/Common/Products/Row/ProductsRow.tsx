@@ -10,7 +10,7 @@ const ProductsRow = ({ products, text, rightSection }: ProductsRowType) => {
       <section className="products-row">
 
          <RowTextDiv
-            leftTxt={ text }
+            leftTxt={ text[0].toUpperCase() + text.slice(1) }
             rightTxt={ rightSection.text }
             url={ rightSection.url }
          />

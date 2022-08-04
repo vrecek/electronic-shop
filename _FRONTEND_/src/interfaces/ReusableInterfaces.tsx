@@ -80,6 +80,16 @@ export interface PossibleCategoryType {
 
 /*********************************************/
 
+/**
+ * POSSIBLE HOMEPAGE CATEGORIES
+ */
+
+export interface ZoneCardDetails extends RowRightInfo {
+   image: string
+}
+ 
+ /*********************************************/
+
 export type Direction = 'left' | 'right'
 
 export type Ref<T> = React.RefObject<T>

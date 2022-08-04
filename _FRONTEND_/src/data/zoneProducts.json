@@ -1,0 +1,52 @@
+{
+   "gaming": [
+      {
+         "txt": "Gaming equipment",
+         "url": "/search/ct/keyboards"
+      },
+
+      {
+         "txt": "New and old games",
+         "url": "/search/ct/games"
+      },
+
+      {
+         "txt": "Latest PC components",
+         "url": "/search/ct/components"
+      }
+   ],
+
+   "household": [
+      {
+         "txt": "Small kitchen devices",
+         "url": "/search/ct/kitchen-devices"
+      },
+
+      {
+         "txt": "Fridges and freezers",
+         "url": "/search/ct/freezers"
+      },
+
+      {
+         "txt": "Various home appliances",
+         "url": "/search/ct/appliances"
+      }
+   ],
+
+   "work": [
+      {
+         "txt": "Notebooks and other small devices",
+         "url": "/search/ct/work-small-devices"
+      },
+
+      {
+         "txt": "All sort of mobile phones",
+         "url": "/search/ct/phones"
+      },
+
+      {
+         "txt": "Medium devices like printers",
+         "url": "/search/ct/work-medium-devices"
+      }
+   ]
+}

@@ -1,4 +1,4 @@
-@import '../../config';
+@import '../config';
 
 section.hidden-nav-category-content {
    background: rgb(250, 250, 250);
@@ -9,6 +9,7 @@ section.hidden-nav-category-content {
    position: absolute;
    top: 0;
    left: 100%;
+   min-height: 100%;
    width: calc(100vw - 101%);
    display: none;
    justify-content: space-around;
