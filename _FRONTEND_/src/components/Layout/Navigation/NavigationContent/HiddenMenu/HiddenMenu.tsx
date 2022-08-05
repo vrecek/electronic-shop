@@ -10,12 +10,12 @@ const HiddenMenu = ({ menuRef }: { menuRef: Ref<HTMLElement>}) => {
    const links: NavigationMenuLinkType[] = [
       {
          name: 'Log in',
-         url: '/'
+         url: '/log-in'
       },
 
       {
          name: 'Register',
-         url: '/'
+         url: '/register'
       },
 
       {
@@ -36,13 +36,13 @@ const HiddenMenu = ({ menuRef }: { menuRef: Ref<HTMLElement>}) => {
       },
 
       {
-         name: 'Terms & Services',
-         url: '/'
+         name: 'Terms & Conditions',
+         url: '/terms-and-conditions'
       },
 
       {
          name: 'Contact',
-         url: '/'
+         url: '/contact'
       },
    ]
 

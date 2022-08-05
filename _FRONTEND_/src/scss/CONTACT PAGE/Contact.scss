@@ -1,0 +1,142 @@
+@import '../config';
+
+main.contact-page {
+   padding: 3em;
+   height: 100vh;
+   display: flex;
+
+   h1.top {
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 1.75rem;
+      margin-bottom: .25em;
+   }
+
+   h2.btm {
+      font-weight: 600;
+      font-size: .95rem;
+      margin-bottom: 4em;
+   }
+
+   section.informations {
+      width: 35%;
+      padding: 3em 2em;
+      background: #191970;
+      flex-direction: column;
+      color: $clr-white;
+
+      ul {
+         list-style: none;
+
+         li {
+            @include Flex(none, c);
+            margin-bottom: 1em;
+
+            &, span.gth-open {
+               font-size: 1.1rem;
+               font-weight: 500;
+               font-family: 'Prompt', sans-serif;
+            }
+
+            span.gth-open,
+            span.copy-mail {
+               margin: 0 0 0 auto;
+               @include Rectangle(25px);
+               cursor: pointer;
+               transition: .3s;
+
+               svg { @include FullSize; pointer-events: none; }
+
+               &:hover {
+                  color: darken($color: $clr-white, $amount: 10%);
+               }
+            }
+
+            span.copy-mail {
+               position: relative;
+               
+               h6 {
+                  position: absolute;
+                  top: 100%;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  font-size: .85rem;
+                  pointer-events: none;
+               }
+            }
+
+            span.icon {
+               @include Rectangle(30px);
+               color: orange;
+               margin-right: .75em;
+
+               svg { @include FullSize; }
+            }
+         }
+      }
+   }
+
+   form {
+      width: 65%;
+      padding: 3em 2em;
+      background: rgb(249, 248, 248);
+
+      h2.btm {
+         margin-bottom: 3em;
+      }
+
+      textarea {
+         margin-bottom: 1.5em;
+         resize: none;
+         height: 200px;
+      }
+
+      input,
+      textarea {
+         font-size: 1.2rem;
+         padding: .5em;
+         outline: 0;
+         width: 100%;
+      }
+
+      div.input-div {
+         margin-bottom: 1.5em;
+
+         h5 {
+            text-transform: uppercase;
+            font-size: .8rem;
+            font-weight: 500;
+            font-family: 'Prompt', sans-serif;
+         }
+         
+         input {
+            &::placeholder {
+               font-size: .9rem;
+               text-transform: uppercase;
+            }
+         }
+      }
+      
+      button {
+         display: block;
+         width: 150px;
+         padding: .75em 0;
+         outline: 0;
+         border-radius: .15em;
+         border: 0;
+         background: royalblue;
+         cursor: pointer;
+         transition: .3s;
+
+         label {
+            font-weight: 600;
+            color: $clr-white;
+            font-size: .9rem;
+         }
+
+         &:hover {
+            background: darken($color: royalblue, $amount: 10%);
+         }
+      }
+   }
+}

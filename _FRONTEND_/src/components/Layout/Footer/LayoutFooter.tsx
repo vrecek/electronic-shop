@@ -36,12 +36,12 @@ const LayoutFooter = () => {
 
       {
          name: 'Contact',
-         url: '/'
+         url: '/contact'
       },
       
       {
          name: 'Terms & Conditions',
-         url: '/'
+         url: '/terms-and-conditions'
       }
    ]
 

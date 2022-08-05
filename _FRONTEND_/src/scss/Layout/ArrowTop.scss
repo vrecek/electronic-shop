@@ -1,0 +1,19 @@
+@import '../config';
+
+span.arrow-top-layout {
+   position: fixed;
+   right: 4px;
+   bottom: 4px;
+   background: royalblue;
+   color: $clr-white;
+   z-index: 3;
+   @include Rectangle(25px);
+   cursor: pointer;
+   opacity: 0;
+   pointer-events: none;
+   transition: .3s;
+
+   svg {
+      @include FullSize;
+   }
+}

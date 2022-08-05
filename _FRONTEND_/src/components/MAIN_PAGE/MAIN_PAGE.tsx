@@ -1,17 +1,18 @@
 import React from 'react'
 import { PossibleHomepageCategory, HomepageProductType } from '../../interfaces/ReusableInterfaces'
 import ProductsRow from '../Common/Products/Row/ProductsRow'
-import LayoutNavigation from '../Layout/Navigation/LayoutNavigation'
 import CategorySection from './CategorySection/CategorySection'
 import SliderContainer from './Slider/SliderContainer'
 import item from '../../images/prod1.png'
 import ProductsCategorySection from '../Common/Products/Category/ProductsCategorySection'
-import minorCats from '../../data/productCategories.json'
 import ZoneSection from '../Common/Products/Zone/ZoneSection'
 import { getCategory, getCommonCategory } from '../../functions/getCategory'
-import LayoutFooter from '../Layout/Footer/LayoutFooter'
+import NewsletterSection from './Newsletter/NewsletterSection'
+import LayoutWrap from '../Layout/LayoutWrap'
 
 const MAIN_PAGE = () => {
+   window.scrollTo(0, 0)
+
    const recommendedProducts: HomepageProductType[] = [
       {
          id: React.useId(),
@@ -91,67 +92,69 @@ const MAIN_PAGE = () => {
    return (
       <main className="main-page">
 
-         <LayoutNavigation />
+         <LayoutWrap>
 
-         <SliderContainer />
+            <SliderContainer />
 
-         <CategorySection />
+            <CategorySection />
 
-         <ProductsRow 
-            text='Recommended'
-            rightSection={{
-               text: 'See more',
-               url: '/'
-            }}
-            products={ recommendedProducts }
-         />
+            <ProductsRow 
+               text='Recommended'
+               rightSection={{
+                  text: 'See more',
+                  url: '/'
+               }}
+               products={ recommendedProducts }
+            />
 
-         <ProductsCategorySection 
-            products={ recommendedProducts }
-            category={ possibleCategories[1] }
-         />
+            <ProductsCategorySection 
+               products={ recommendedProducts }
+               category={ possibleCategories[1] }
+            />
 
-         <ZoneSection
-            category={ possibleCategories[0] }
-         />
+            <ZoneSection
+               category={ possibleCategories[0] }
+            />
 
-         <ProductsRow 
-            text={ categories[0] }
-            rightSection={{
-               text: 'See more',
-               url: '/'
-            }}
-            products={ recommendedProducts }
-         />
+            <ProductsRow 
+               text={ categories[0] }
+               rightSection={{
+                  text: 'See more',
+                  url: '/'
+               }}
+               products={ recommendedProducts }
+            />
 
-         <ProductsRow 
-            text={ categories[1] }
-            rightSection={{
-               text: 'See more',
-               url: '/'
-            }}
-            products={ recommendedProducts }
-         />
+            <ProductsRow 
+               text={ categories[1] }
+               rightSection={{
+                  text: 'See more',
+                  url: '/'
+               }}
+               products={ recommendedProducts }
+            />
 
-         <ProductsCategorySection 
-            products={ recommendedProducts }
-            category={ possibleCategories[0] }
-         />
+            <ProductsCategorySection 
+               products={ recommendedProducts }
+               category={ possibleCategories[0] }
+            />
 
-         <ProductsRow 
-            text={ categories[2] }
-            rightSection={{
-               text: 'See more',
-               url: '/'
-            }}
-            products={ recommendedProducts }
-         />
+            <ProductsRow 
+               text={ categories[2] }
+               rightSection={{
+                  text: 'See more',
+                  url: '/'
+               }}
+               products={ recommendedProducts }
+            />
 
-         <ZoneSection
-            category={ possibleCategories[1] }
-         />       
+            <ZoneSection
+               category={ possibleCategories[1] }
+            />       
 
-         <LayoutFooter />
+            <NewsletterSection />
+
+         </LayoutWrap>
 
       </main>
    )

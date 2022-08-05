@@ -12,12 +12,12 @@ const NavigationStrapList = () => {
       },
 
       {
-         url: '/',
+         url: '/terms-and-conditions',
          name: 'Terms & Conditions'
       },
 
       {
-         url: '/',
+         url: '/contact',
          name: 'Contact'
       }
    ]
