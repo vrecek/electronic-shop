@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { NavIconType } from '../../../../interfaces/NavigationInterfaces'
 
-const NavIcon = ({ content, text, cname, additionalNum }: NavIconType) => {
+const NavIcon = ({ content, text, cname, additionalNum, clickUrl }: NavIconType) => {
+   const n = useNavigate()
+
    return (
-      <section className={`nav-icon ${ cname ?? '' }`}>
+      <section onClick={ () => n(clickUrl) } className={`nav-icon ${ cname ?? '' }`}>
 
          { additionalNum && <h6>{ additionalNum }</h6> }
          { content }

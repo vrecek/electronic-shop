@@ -1,5 +1,5 @@
 import React from 'react'
-import { AiFillExclamationCircle, AiOutlineExclamationCircle, AiOutlineFire, AiOutlinePercentage } from 'react-icons/ai'
+import { AiOutlineExclamationCircle, AiOutlineFire, AiOutlinePercentage } from 'react-icons/ai'
 import { BsCheckAll } from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom'
 import { CategoryNavListType } from '../../../interfaces/HomepageInterfaces'

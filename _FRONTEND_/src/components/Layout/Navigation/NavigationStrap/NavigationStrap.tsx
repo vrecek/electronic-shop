@@ -2,6 +2,7 @@ import React from 'react'
 import image from '../../../../images/reactImg.png'
 import FigureImage from '../../../Common/FigureImage'
 import NavigationStrapList from './NavigationStrapList'
+import '../../../../css/NavigationStrap.css'
 
 const NavigationStrap = () => {
    return (

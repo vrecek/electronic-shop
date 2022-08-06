@@ -1,7 +1,7 @@
 const shuffleArray = <T,>(array: T[]): T[] => {
-   let currentIndex = array.length,  randomIndex;
+   let currentIndex: number = array.length, randomIndex;
 
-   while (currentIndex != 0) {
+   while (currentIndex !== 0) {
 
      randomIndex = Math.floor(Math.random() * currentIndex);
      currentIndex--;

@@ -12,6 +12,7 @@ export interface NavigationMenuLinkType extends NavigationLinkType {
 export interface NavIconType {
    content: JSX.Element,
    text: string,
+   clickUrl: string,
    cname?: string,
    additionalNum?: number
 }
@@ -19,4 +20,9 @@ export interface NavIconType {
 export type SliderButtonsType = {
    imgNum: number,
    slider: Ref<HTMLDivElement>
+}
+
+export interface LayoutWrapType {
+   children: any,
+   onlyStrap?: boolean
 }

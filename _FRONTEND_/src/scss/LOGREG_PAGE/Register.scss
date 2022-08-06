@@ -1,0 +1,18 @@
+@import '../config';
+
+main.register-page {
+   div.wrap {
+      width: 80%;
+   }
+
+   iframe {
+      margin-top: .5em;
+   }
+
+   section.left-section {
+      ul {
+         margin-left: 1.25em;
+         margin-top: 2em;
+      }
+   }
+}

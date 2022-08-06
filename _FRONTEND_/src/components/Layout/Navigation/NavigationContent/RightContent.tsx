@@ -8,9 +8,9 @@ const RightContent = () => {
    return (
       <section className="right-content">
 
-         <NavIcon content={ <BsCart2 /> } text='Cart' additionalNum={ 99 } />
-         <NavIcon content={ <AiOutlineUserAdd /> } text='Register' />
-         <NavIcon content={ <BiLogIn /> } text='Log in' />
+         <NavIcon clickUrl='/basket' content={ <BsCart2 /> } text='Cart' additionalNum={ 99 } />
+         <NavIcon clickUrl='/register' content={ <AiOutlineUserAdd /> } text='Register' />
+         <NavIcon clickUrl='/log-in' content={ <BiLogIn /> } text='Log in' />
 
       </section>
    )

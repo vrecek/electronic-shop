@@ -1,0 +1,93 @@
+@import '../config';
+
+main.user-basket {
+   height: calc(100vh - 45px);
+   @include Flex(c, c);
+
+   section.main {
+      height: 95%;
+
+      div.sect-info {
+         border-bottom: 1px solid grey;
+         padding: 1em 0;
+         margin-bottom: 2.25em;
+
+         h1 {
+            font-weight: 700;
+            font-size: 1.75rem;
+            font-family: 'Prompt', sans-serif;
+         }
+      }
+
+      &.products-section {
+         width: 60%;
+         background: whitesmoke;
+         padding: 0 3em;
+
+         div.sect-info {
+            @include Flex(sb, c);
+
+            h2 {
+               font-size: 1.5rem;
+               font-weight: 600;
+               font-family: 'Prompt', sans-serif;
+            }
+         }
+      }
+
+      &.summary {
+         width: 30%;
+         background: rgb(228, 228, 228);
+         padding: 0 2em;
+
+         section.delivery-dropdown {
+            margin-top: 1em;
+         }
+
+         div.total-cost {
+            @include Flex(sb, c);
+
+            &.info {
+               h5,
+               span {
+                  font-size: 1.1rem;
+                  font-weight: 600;
+               }
+            }
+            
+            &.total {
+               padding-top: 1.5em;
+               border-top: 1px solid grey;
+               margin: 2.25em 0 2em 0;
+
+               h5,
+               span {
+                  font-weight: 700;
+                  font-size: 1.2rem;
+                  font-family: 'Prompt', sans-serif;
+               }
+            }
+         }
+
+         button {
+            width: 100%;
+            padding: .75em 0;
+            outline: 0;
+            border: 0;
+            background: royalblue;
+            border-radius: .15em;
+            cursor: pointer;
+            transition: .3s;
+            
+            label {
+               font-size: 1.1rem;
+               color: $clr-white;
+               font-family: 'Prompt', sans-serif;
+               font-weight: 600;
+            }
+
+            &:hover { background: darken(royalblue, 10%); }
+         }
+      }
+   }
+}
