@@ -19,29 +19,81 @@ main.user-basket {
          }
       }
 
-      &.products-section {
-         width: 60%;
-         background: whitesmoke;
-         padding: 0 3em;
-
-         div.sect-info {
-            @include Flex(sb, c);
-
-            h2 {
-               font-size: 1.5rem;
-               font-weight: 600;
-               font-family: 'Prompt', sans-serif;
-            }
-         }
-      }
-
       &.summary {
          width: 30%;
          background: rgb(228, 228, 228);
          padding: 0 2em;
 
+         h2.no-prods {
+            text-align: center;
+            font-weight: 800;
+            margin-top: 2em;
+            font-size: 1.5rem;
+         }
+
          section.delivery-dropdown {
-            margin-top: 1em;
+            margin-top: 1.5em;
+
+            section.wrap {
+               margin-top: .25em;
+               position: relative;
+
+               ul {
+                  list-style: none;
+                  position: absolute;
+                  top: 100%;
+                  left: 0;
+                  width: 100%;
+                  background: white;
+                  transition: .3s;
+                  display: none;
+                  height: 0;
+                  overflow: hidden;
+
+                  li {
+                     @include Flex(sb, c);
+                     padding: 1em;
+                     cursor: pointer;
+                     transition: .3s;
+
+                     h6 {
+                        font-size: .85rem;
+                        font-weight: 600;
+                        pointer-events: none;
+                     }
+
+                     &:hover {
+                        background: royalblue;
+                        color: $clr-white;
+                     }
+                  }
+               }
+
+               div.current {
+                  width: 100%;
+                  padding: 1em;
+                  border: 1px solid rgb(255, 255, 255);
+                  background: whitesmoke;
+                  @include Flex(sb, c);
+                  cursor: pointer;
+                  border-radius: .15em;
+
+                  h6 {
+                     text-transform: uppercase;
+                     font-weight: 500;
+                     font-family: 'Prompt', sans-serif;
+                     font-size: .85rem;
+                     pointer-events: none;
+                  }
+
+                  span {
+                     @include Rectangle(20px);
+                     pointer-events: none;
+
+                     svg { @include FullSize; }
+                  }
+               }
+            }
          }
 
          div.total-cost {

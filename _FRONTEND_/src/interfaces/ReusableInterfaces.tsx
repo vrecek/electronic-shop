@@ -93,3 +93,5 @@ export interface ZoneCardDetails extends RowRightInfo {
 export type Direction = 'left' | 'right'
 
 export type Ref<T> = React.RefObject<T>
+
+export type State<T> = React.Dispatch<React.SetStateAction<T>>
