@@ -1,0 +1,235 @@
+@import '../config';
+
+main.search-page {
+   min-height: calc(100vh - 130px);
+
+   section.products {
+      min-height: calc(100vh - 130px);
+      display: flex;
+
+      section.products-section {
+         width: 79%;
+         padding: 1em;
+
+         section.products-container {
+            article.product {
+               background: white;
+               border-radius: .15em;
+               display: flex;
+
+               button {
+                  width: 220px;
+                  padding: .75em 0;
+                  background: royalblue;
+                  border-radius: 1em;
+                  border: 0;
+                  outline: 0;
+                  cursor: pointer;
+                  transition: .3s;
+
+                  label {
+                     font-weight: 500;
+                     font-family: 'Prompt', sans-serif;
+                     font-size: 1rem;
+                     color: $clr-white;
+                     text-transform: uppercase;
+                  }
+
+                  &:hover {
+                     background: darken(royalblue, 10%);
+                  }
+               }
+
+               section.text-wrap { 
+                  @include Flex(sb, none); 
+                  flex-direction: column; 
+                  padding: 1em 0;
+               }
+
+               h2.name {
+                  font-size: 2rem;
+                  font-family: 'Prompt', sans-serif;
+                  font-weight: 600;
+               }
+
+               figure {
+                  margin-right: 1em;
+                  width: 35%;
+                  aspect-ratio: 1;
+
+                  img {
+                     @include FullSize;
+                     object-fit: cover;
+                  }
+               }
+
+               h3.price {
+                  font-size: 1.75rem;
+                  font-weight: 500;
+                  font-family: 'Prompt', sans-serif;
+               }
+
+               section.tags {
+                  display: flex;
+
+                  span {
+                     &:not(:last-child) { margin-right: .5em; }
+
+                     background: $clr-white;
+                     border-radius: .15em;
+                     background: rgb(19, 220, 146);
+                     padding: .5em;
+                     font-size: 1rem;
+                     font-weight: 600;
+                     font-family: 'Prompt', sans-serif;
+                     cursor: pointer;
+                     transition: .3s;
+                     color: $clr-white;
+
+                     &:hover {
+                        transform: scale(0.9)
+                     }
+                  }
+               }
+
+               div.product-stars-container {
+                  @include Flex(none, c);
+
+                  h6 {
+                     color: rgb(247, 211, 7);
+                     text-shadow: 0 0 2px black;
+                     font-size: 1.75rem;
+                     font-weight: 700;
+                     margin-right: .2em;
+                  }
+
+                  span {
+                     @include Rectangle(35px);
+                     &.active { color: rgb(247, 211, 7); }
+
+                     svg { @include FullSize; }
+                  }
+               }
+               
+               &:not(:last-child) { margin-bottom: 2em; }
+            }
+         }
+
+         h1.searched-info {
+            padding-bottom: .75em;
+
+            &, span {
+               font-size: 1.5rem;
+               font-weight: 400;
+               font-family: 'Prompt', sans-serif;
+            }
+
+            span {
+               font-style: italic;
+            }
+         }
+      }
+
+      aside.filters {
+         width: 21%;
+         background: whitesmoke;
+         padding: 1em;
+         position: sticky;
+         top: 0;
+         height: 100vh;
+
+         button {
+            width: 100%;
+            outline: 0;
+            cursor: pointer;
+            transition: .3s;
+            margin-top: 1em;
+            padding: .5em 0;
+            border-radius: .1em;
+            border: 0;
+
+            &.reset { 
+               background: royalblue;
+               &:hover {
+                  background: darken(royalblue, 5%);
+               } 
+            }
+            &.apply { 
+               background: purple;
+
+               &:hover {
+                  background: darken(purple, 5%);
+               } 
+            }
+
+            label {
+               font-weight: 500;
+               text-transform: uppercase;
+               font-family: 'Prompt', sans-serif;
+               color: $clr-white;
+            }
+         }
+
+         section.select {
+            background: whitesmoke;
+            padding: 1em;
+
+            h2 {
+               text-transform: uppercase;
+               font-weight: 500;
+               font-family: 'Prompt', sans-serif;
+               font-size: 1.25rem;
+            }
+
+            div.wrap {
+               div {
+                  font-family: 'Prompt', sans-serif;
+                  font-size: 1.1rem;
+                  @include Flex(none, c);
+                  background: rgb(255, 255, 255);
+                  padding: .5em;
+                  border-radius: .2em;
+
+                  label { cursor: pointer; margin-left: .25em; }
+               }
+            }
+         }
+
+         h1 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 1.25em;
+         }
+      }
+   }
+
+   section.no-products {
+      @include FullSize;
+      height: calc(100vh - 130px);
+      @include Flex(c, c);
+      flex-direction: column;
+      background: white;
+
+      h1,
+      span {
+         font-size: 2rem;
+         font-family: 'Prompt', sans-serif;
+         font-weight: 500;
+      }
+
+      span {
+         font-style: italic;
+         font-weight: 400;
+      }
+
+      figure {
+         width: 20%;
+         margin-top: 1em;
+
+         img {
+            @include FullSize;
+            object-fit: cover;
+         }
+      }
+   }
+}

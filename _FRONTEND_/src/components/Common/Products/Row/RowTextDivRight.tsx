@@ -9,8 +9,8 @@ const RowTextDivRight = ({ url, txt }: RowRightInfo) => {
    return (
       <h2 onClick={ () => n(url) } className="right">
 
-      { txt }
-      <span> <AiOutlineArrowRight /> </span>
+         { txt }
+         <span> <AiOutlineArrowRight /> </span>
 
       </h2>
    )

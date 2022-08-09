@@ -1,0 +1,27 @@
+@import '../config';
+
+ul.select-current-section {
+   display: flex;
+   width: 95%;
+   margin: 0 auto;
+   border-top: 3px solid orange;
+   list-style: none;
+   margin-bottom: 3em;
+   background: white;
+
+   li {
+      font-size: 1.1rem;
+      font-weight: 500;
+      padding: .75em;
+      width: 10%;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-align: center;
+
+      &.active {
+         border-bottom: 3px solid orange;
+         pointer-events: none;
+      }
+   }
+}

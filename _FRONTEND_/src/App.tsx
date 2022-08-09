@@ -8,6 +8,8 @@ import ArrowTop from './components/Layout/ArrowTop';
 import LOGIN_PAGE from './components/LOGREG_PAGE/LOGIN_PAGE';
 import REGISTER_PAGE from './components/LOGREG_PAGE/REGISTER_PAGE';
 import USERS_BASKET from './components/BASKET_PAGE/USERS_BASKET';
+import SEARCH_PAGE from './components/SEARCH_PAGE/SEARCH_PAGE';
+import PRODUCT_PAGE from './components/PRODUCT_PAGE/PRODUCT_PAGE';
 
 function App() {
    return (
@@ -25,6 +27,10 @@ function App() {
                <Route path='/register' element={ <REGISTER_PAGE /> } />
                
                <Route path='/basket' element={ <USERS_BASKET /> } />
+
+               <Route path='/search/:type/:query' element={ <SEARCH_PAGE /> } />
+
+               <Route path='/product/:id' element={ <PRODUCT_PAGE /> } />
 
             </Routes>
 

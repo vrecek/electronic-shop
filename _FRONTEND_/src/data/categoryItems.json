@@ -8,17 +8,17 @@
 
          {
             "name": "Gaming PCs",
-            "url": "/"
+            "url": "/search/ct/pc"
          },
 
          {
             "name": "iMacs",
-            "url": "/"
+            "url": "/search/ct/imac"
          },
 
          {
             "name": "PCs for work",
-            "url": "/"
+            "url": "/search/ct/workpc"
          }
       ],
 
@@ -30,6 +30,18 @@
 
          {
             "name": "Case lights",
+            "url": "/search/ct/lights"
+         }
+      ],
+
+      [
+         {
+            "name": "Other",
+            "url": "/"
+         },
+
+         {
+            "name": "Games",
             "url": "/"
          }
       ]
@@ -44,32 +56,32 @@
 
          {
             "name": "iPhone",
-            "url": "/"
+            "url": "/search/ct/iphones"
          },
 
          {
             "name": "Samsung",
-            "url": "/"
+            "url": "/search/ct/samsung"
          },
 
          {
             "name": "Xiaomi",
-            "url": "/"
+            "url": "/search/ct/xiaomi"
          },
 
          {
             "name": "Huawei",
-            "url": "/"
+            "url": "/search/ct/huawei"
          },
 
          {
             "name": "Sony",
-            "url": "/"
+            "url": "/search/ct/sony"
          },
 
          {
             "name": "LG",
-            "url": "/"
+            "url": "/search/ct/lg"
          }
       ],
 
@@ -81,17 +93,12 @@
 
          {
             "name": "Motorola",
-            "url": "/"
+            "url": "/search/ct/motorola"
          },
 
          {
             "name": "Nokia",
-            "url": "/"
-         },
-
-         {
-            "name": "LG",
-            "url": "/"
+            "url": "/search/ct/nokia"
          }
       ],
 
@@ -122,12 +129,12 @@
 
          {
             "name": "Gaming laptops",
-            "url": "/"
+            "url": "/search/ct/gaminglaptop"
          },
 
          {
             "name": "Office laptops",
-            "url": "/"
+            "url": "/search/ct/officelaptop"
          }
       ],
 
@@ -139,32 +146,32 @@
 
          {
             "name": "Macs",
-            "url": "/"
+            "url": "/search/ct/mac"
          },
 
          {
             "name": "Lenovo",
-            "url": "/"
+            "url": "/search/ct/lenovo"
          },
 
          {
             "name": "Asus",
-            "url": "/"
+            "url": "/search/ct/asus"
          },
 
          {
             "name": "Dell",
-            "url": "/"
+            "url": "/search/ct/dell"
          },
 
          {
             "name": "Acer",
-            "url": "/"
+            "url": "/search/ct/acer"
          },
 
          {
             "name": "MSI",
-            "url": "/"
+            "url": "/search/ct/msi"
          }
       ]
    ],
@@ -178,17 +185,17 @@
 
          {
             "name": "Membrane keyboards",
-            "url": "/"
+            "url": "/search/ct/membrane"
          },
 
          {
             "name": "Mechanical keyboards",
-            "url": "/"
+            "url": "/search/ct/mechanical"
          },
 
          {
             "name": "LED keyboards",
-            "url": "/"
+            "url": "/search/ct/ledkeyboard"
          }
       ]
    ],
@@ -202,12 +209,12 @@
 
          {
             "name": "Wireless mouses",
-            "url": "/"
+            "url": "/search/ct/wirelessmouse"
          },
 
          {
             "name": "Wired mouses",
-            "url": "/"
+            "url": "/search/ct/wiredmouse"
          }
       ],
 
@@ -219,17 +226,17 @@
 
          {
             "name": "Logitech",
-            "url": "/"
+            "url": "/search/ct/logitech"
          },
 
          {
             "name": "Razer",
-            "url": "/"
+            "url": "/search/ct/razer"
          },
 
          {
             "name": "Steelseries",
-            "url": "/"
+            "url": "/search/ct/steelseries"
          }
       ]
    ],
@@ -243,59 +250,22 @@
 
          {
             "name": "Wireless headphones",
-            "url": "/"
+            "url": "/search/ct/wirelessheadphone"
          },
 
          {
             "name": "Wired headphones",
-            "url": "/"
+            "url": "/search/ct/wiredheadphone"
          },
 
          {
             "name": "Bluetooth",
-            "url": "/"
-         },
-
-         {
-            "name": "On battery",
-            "url": "/"
+            "url": "/search/ct/bluetoothheadphone"
          },
 
          {
             "name": "iPods",
-            "url": "/"
-         }
-      ],
-
-      [
-         {
-            "name": "Brands",
-            "url": "/"
-         },
-
-         {
-            "name": "Sony",
-            "url": "/"
-         },
-
-         {
-            "name": "Apple",
-            "url": "/"
-         },
-
-         {
-            "name": "JBL",
-            "url": "/"
-         },
-
-         {
-            "name": "Steelseries",
-            "url": "/"
-         },
-
-         {
-            "name": "Razer",
-            "url": "/"
+            "url": "/search/ct/ipods"
          }
       ]
    ],
@@ -309,27 +279,27 @@
 
          {
             "name": "TVs",
-            "url": "/"
+            "url": "/search/ct/tv"
          },
 
          {
             "name": "Radios",
-            "url": "/"
+            "url": "/search/ct/radio"
          },
 
          {
             "name": "Routers",
-            "url": "/"
+            "url": "/search/ct/router"
          },
 
          {
             "name": "Speakers",
-            "url": "/"
+            "url": "/search/ct/speakers"
          },
 
          {
             "name": "Digitial clocks",
-            "url": "/"
+            "url": "/search/ct/clock"
          }
       ],
 
@@ -341,12 +311,12 @@
 
          {
             "name": "Microwaves",
-            "url": "/"
+            "url": "/search/ct/microwave"
          },
 
          {
             "name": "Fridges",
-            "url": "/"
+            "url": "/search/ct/fridge"
          }
       ]
    ],
@@ -360,84 +330,64 @@
 
          {
             "name": "Graphic cards",
-            "url": "/"
+            "url": "/search/ct/gpu"
          },
 
          {
             "name": "Processors",
-            "url": "/"
+            "url": "/search/ct/cpu"
          },
 
          {
             "name": "RAM",
-            "url": "/"
+            "url": "/search/ct/ram"
          },
 
          {
             "name": "HDD",
-            "url": "/"
+            "url": "/search/ct/hdd"
          },
 
          {
             "name": "SSD",
-            "url": "/"
+            "url": "/search/ct/ssd"
          },
 
          {
             "name": "Power supply",
-            "url": "/"
+            "url": "/search/ct/powersupply"
          },
 
          {
             "name": "Cables",
-            "url": "/"
-         },
-
-         {
-            "name": "SSD",
-            "url": "/"
+            "url": "/search/ct/cables"
          },
 
          {
             "name": "Fans",
-            "url": "/"
+            "url": "/search/ct/fans"
          },
 
          {
             "name": "Motherboards",
-            "url": "/"
+            "url": "/search/ct/motherboard"
          }
       ],
 
       [
          {
-            "name": "Accessories",
+            "name": "Games",
             "url": "/"
          },
 
          {
-            "name": "Sony",
-            "url": "/"
+            "name": "PC games",
+            "url": "/search/ct/pcgames"
          },
 
          {
-            "name": "Apple",
-            "url": "/"
-         },
-
-         {
-            "name": "JBL",
-            "url": "/"
-         },
-
-         {
-            "name": "Steelseries",
-            "url": "/"
-         },
-
-         {
-            "name": "Razer",
-            "url": "/"
+            "name": "Console games",
+            "url": "/search/ct/consolegames"
          }
       ]
    ]

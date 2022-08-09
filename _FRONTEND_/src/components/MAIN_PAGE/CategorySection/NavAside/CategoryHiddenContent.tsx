@@ -14,7 +14,7 @@ const CategoryHiddenContent = ({ itemsLists }: { itemsLists: NavigationLinkType[
                   {
                      x.map((y, j) => (
                         <li 
-                        onClick={ () => n(`/search/tag${ y.url }`) } 
+                        onClick={ () => n(y.url) } 
                         key={ j }
                         >
                            { y.name }

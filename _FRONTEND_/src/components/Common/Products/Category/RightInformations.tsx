@@ -5,8 +5,11 @@ import gamingImg from '../../../../images/productsCategoryRight/gaming.jpg'
 import householdImg from '../../../../images/productsCategoryRight/household.jpg'
 import workImg from '../../../../images/productsCategoryRight/work.jpg'
 import * as jsx from './RightJSX'
+import { useNavigate } from 'react-router-dom'
 
 const RightInformations = ({ category }: { category: PossibleHomepageCategory }) => {
+   const n = useNavigate()
+
    const determineContent = (): DetermineRightReturn => {
       let img: string = ''
       let ele: JSX.Element = <></>
@@ -14,17 +17,17 @@ const RightInformations = ({ category }: { category: PossibleHomepageCategory })
       switch(category) {
          case 'gaming':
             img = gamingImg 
-            ele = jsx.RightJSXGaming()
+            ele = jsx.RightJSXGaming(n)
          break;
          
          case 'work':
             img = workImg 
-            ele = jsx.RightJSXWork()
+            ele = jsx.RightJSXWork(n)
          break;
 
          case 'household':
             img = householdImg 
-            ele = jsx.RightJSXHousehold()
+            ele = jsx.RightJSXHousehold(n)
          break;
       }
 
