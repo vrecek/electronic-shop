@@ -1,5 +1,143 @@
 @import '../config';
 
+section.content {
+   width: 95%;
+   margin: 0 auto;
+   padding-bottom: 2em;
+
+   section.product-details {
+      p {
+         font-family: 'Prompt', sans-serif;
+         font-weight: 400;
+         width: 80%;
+      }
+
+      h2 {
+         font-weight: 700;
+         text-transform: uppercase;
+         margin: 2em 0 1em 0; 
+         font-size: 1.2rem;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+
+         tbody {
+            td {
+               font-weight: 400;
+               font-family: 'Prompt', sans-serif;
+            }
+         }
+
+         td {
+            width: 50%;
+            padding: 1em;
+            display: inline-block;
+         }
+
+         tr {
+            background: rgb(241, 239, 239);
+            
+            &:nth-child(odd) {
+               background: white;
+            }
+         }
+
+         thead {
+            tr {
+               background: royalblue !important;
+
+               td {
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  color: $clr-white;
+               }
+            }
+         }
+      }
+   }
+
+   section.product-opinions {
+      section.rate-summary {
+         div.wrap {
+            @include Flex(none, c);
+
+            div {
+               @include Flex(none, c);
+            }
+
+            h6,
+            h3 {
+               font-size: 1.2rem;
+            }
+
+            span {
+               @include Rectangle(40px);
+               color: rgb(213, 213, 213);
+
+               svg {
+                  @include FullSize;
+               }
+
+               &.active { color: gold; }
+            }
+
+            h3 { margin-left: 1em; }
+            h6 { margin-right: .5em; color: gold; font-weight: 700; }
+         }
+      }
+
+      section.comment-section {
+         margin-top: 1em;
+
+         article.comment {
+            border-bottom: 1px solid grey;
+            margin-bottom: 3em;
+            padding-bottom: .5em;
+            
+            p {
+               font-family: 'Prompt', sans-serif;
+               font-size: .95rem;
+               margin-top: .5em;
+               width: 50%;
+            }
+      
+            div.info {
+               @include Flex(none, c);
+
+               h6 {
+                  margin-left: .5em;
+                  font-weight: 400;
+                  font-family: 'Prompt', sans-serif;
+                  font-size: .95rem;
+
+                  &.date {
+                     border-left: 1px solid black;
+                     padding-left: .5em;
+                  }
+               }
+
+               span {
+                  @include Rectangle(20px);
+                  color: grey;
+
+                  svg { @include FullSize; }
+
+                  &.active { color: gold; }
+               }
+            }
+         }
+      }
+
+      h3.comm-h {
+         font-size: 1.4rem;
+         font-weight: 700;
+         margin-top: 1.5em;
+      }
+   }
+}
+
 ul.select-current-section {
    display: flex;
    width: 95%;

@@ -8,9 +8,10 @@ main.product-page {
       min-height: calc(100vh - 130px);
       padding: 2em 0;
       
-      figure {
-         width: 30%;
+      figure.main-figure {
+         width: 40%;
          aspect-ratio: 1;
+         @include Flex(c, c);
 
          img {
             @include FullSize;
@@ -68,7 +69,33 @@ main.product-page {
          p {
             font-size: .9rem;
             width: 80%;
-            margin: .5em 0 2.5em 0;
+            margin: 1.5em 0 2.5em 0;
+         }
+
+         section.select-images {
+            display: flex;
+            margin-bottom: 2em;
+
+            figure {
+               border: 2px solid $clr-black;
+               border-radius: .5em;
+               width: 15%;
+               aspect-ratio: 1;
+               @include Flex(c, c);
+               cursor: pointer;
+               margin-right: .5em;
+
+               img {
+                  @include FullSize;
+                  object-fit: cover;
+                  pointer-events: none;
+               }
+
+               &.active {
+                  border-color: royalblue;
+                  pointer-events: none;
+               }
+            }
          }
 
          div.product-stars-container {
@@ -76,20 +103,20 @@ main.product-page {
             margin: 1em 0 1.5em 0;
 
             h6 {
-               color: goldenrod;
+               color: gold;
                font-weight: 600;
                margin-right: .25em;
                font-size: 1.5rem;
             }
 
             span {
-               color: white;
+               color: grey;
                @include Rectangle(30px);
 
                svg { @include FullSize; }
 
                &.active {
-                  color: goldenrod;
+                  color: gold;
                }
             }
          }

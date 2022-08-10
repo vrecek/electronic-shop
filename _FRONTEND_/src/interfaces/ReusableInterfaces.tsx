@@ -2,6 +2,7 @@ export interface FigureImageType {
    cname?: string,
    altTxt?: string,
    source: string, 
+   action?: (e: React.MouseEvent, src: string) => void
 }
 
 export interface ButtonType {
