@@ -1,0 +1,23 @@
+@import '../config';
+
+main.login-page {
+   div.options {
+      @include Flex(sb, c);
+      margin-top: .1em;
+
+      label { cursor: pointer }
+
+      div {
+         @include Flex(none, c);
+
+         input {
+            margin-right: .25em;
+         }
+      }
+   }
+
+   div.wrap {
+      width: 350px;
+      max-width: 100%;
+   }
+}

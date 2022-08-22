@@ -1,0 +1,221 @@
+@import '../config';
+
+section.products-category-section {
+   display: flex;
+   @include MarginCenter(98%);
+   background: #FFFFFF;
+   border-radius: .5em;
+   margin-top: $space;
+   height: 80vh;
+   
+   section.left-products {
+      width: 70%;
+      padding: 1em;
+      @include Flex(sb, c);
+      flex-direction: column;
+
+      div.arrows {
+         width: 100%;
+         @include Flex(sb, c);
+
+         span {
+            @include Rectangle(clamp(25px, 5vw, 30px));
+            transition: .3s;
+            cursor: pointer;
+
+            svg { @include FullSize; pointer-events: none; }
+
+            &:hover {
+               transform: scale(1.5);
+            }
+         }
+      }
+
+      section.products-container {
+         overflow: scroll;
+         overflow-y: hidden;
+         height: 90%;
+         width: 100%;
+         display: flex;
+         @include ScrolLXStyle;
+
+         article {
+            margin-right: 3em;
+            width: clamp(240px, 60vw, 355px);
+            flex-shrink: 0;
+            margin-bottom: 1em;
+            @include Flex(sb, none);
+            flex-direction: column;
+            padding: 1em;
+
+            div.wrap {
+               height: 45%;
+               @include Flex(sb, none);
+               flex-direction: column;
+            }
+
+            div.product-stars-container {
+               @include Flex(none, c);
+
+               span {
+                  @include Rectangle(clamp(25px, 6vw, 30px));
+
+                  svg { @include FullSize; }
+
+                  &.active { color: orange; }
+               }
+
+               h6 {
+                  margin-right: .25em;
+                  font-size: 1.4rem;
+                  color: $clr-black;
+                  font-weight: 700;
+               }
+            }
+
+            h5.name {
+               font-weight: 500;
+               text-transform: uppercase;
+            }
+
+            h5.price {
+               @include SalePriceStyle(1.5rem, 600)
+            }
+
+            button {
+               border: 0;
+               outline: 0;
+               background: royalblue;
+               border-radius: .15em;
+               padding: .75em 0;
+               cursor: pointer;
+               transition: .3s;
+
+               label {
+                  font-weight: 600;
+                  color: $clr-white;
+                  font-size: 1.1rem;
+               }
+
+               &:hover { background: darken($color: royalblue, $amount: 8%); }
+            }
+
+            figure {
+               height: 50%;
+               @include Flex(c, c);
+               overflow: hidden;
+
+               img {
+                  height: 100%;
+               }
+            }
+         }
+      }
+   }
+
+   aside.right-informations {
+      width: 30%;
+      border-left: 1px solid $clr-black;
+      position: relative;
+
+      section.right-details {
+         z-index: 2;
+         position: relative;
+         padding: 1em;
+         @include Flex(sb, c);
+         flex-direction: column;
+         height: 100%;
+
+         button {
+            width: 80%;
+            padding: clamp(.5em, 4vw, 1em) 0;
+            outline: 0;
+            border-radius: .15em;
+            background: royalblue;
+            border: 0;
+            cursor: pointer;
+            transition: .3s;
+
+            label {
+               @include Clamp(.9, 4, 1.1);
+               font-weight: 600;
+               color: $clr-white;
+            }
+
+            &:hover {
+               background: rgb(54, 89, 195);
+            }
+         }
+
+         h1 {
+            @include Clamp(1.25, 4, 2.2);
+            font-family: 'Prompt', sans-serif; 
+            text-shadow: 0 0 6px black;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+         }
+      }
+      
+      figure {
+         overflow: hidden;
+         position: absolute;
+         left: 0;
+         top: 0;
+         @include FullSize;
+
+         img {
+            @include FullSize;
+            object-fit: cover;
+         } 
+      }
+   }
+
+   @media (max-width: 1000px) {
+      flex-direction: column-reverse;
+      height: auto;
+      padding: 1em 0;
+
+      aside.right-informations {
+         @include MarginCenter(95%);
+         padding: 1em 0;
+         border: 0;
+
+         section.right-details {
+            button {
+               width: 200px;
+               max-width: 70%;
+               margin-top: 1em;
+            }
+         }
+      }
+
+      section.left-products { 
+         width: 100%; 
+
+         section.products-container {
+            article {
+               h5.name {
+                  margin: 1em 0;
+               }
+
+               h5.price { margin-bottom: .5em; }
+
+               figure {
+                  height: auto;
+                  width: 100%;
+
+                  img {
+                     height: auto;
+                     width: 100%;
+                  }
+               }
+            }
+         }
+
+         div.arrows {
+            display: none;
+         }
+      }
+   }
+}

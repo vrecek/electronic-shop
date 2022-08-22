@@ -1,0 +1,164 @@
+@import '../config';
+
+section.products-row {
+   background: #FFFFFF;
+   border-radius: 1em;
+   @include MarginCenter(98%);
+   padding: 1em 0;
+   margin-top: $space;
+
+   div.text-wrap {
+      @include Flex(sb, c);
+      margin-bottom: 1.5em;
+      padding: 0 clamp(.75em, 5vw, 2em);
+
+      h2 {
+         &.left {
+            font-weight: 600;
+            @include Clamp(.9, 4, 1.3);
+            font-family: 'Prompt', sans-serif;
+         }
+
+         &.right {
+            @include Flex(c, c);
+            font-weight: 500;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: .2s;
+            @include Clamp(.85, 3, 1);
+
+            span {
+               @include Rectangle(clamp(15px, 5vw, 20px));
+               margin-left: .5em;
+
+               svg {
+                  @include FullSize;
+               }
+            }
+
+            &:hover {
+               color: royalblue;
+            }
+         }
+      }
+   }
+
+   section.wrap {
+      @include Flex(sb, c);
+      height: inherit;
+      padding: 0 1em;
+
+      div.arrow {
+         width: max-content;
+         cursor: pointer;
+
+         span {
+            display: block;
+            @include Rectangle(25px);
+            transition: .4s;
+            pointer-events: none;
+
+            svg { @include FullSize; }
+         }
+
+         &:hover span {
+            transform: scale(1.5);
+         }
+      }
+   }
+
+   section.product-cont {
+      display: flex;
+      width: 95%;
+      overflow: scroll;
+      overflow-y: hidden;
+      @include ScrolLXStyle;
+
+      article.row-product {
+         width: 250px;
+         // aspect-ratio: 1;
+         // min-height: max-content;
+         border: 1px solid black;
+         border-radius: .15em;
+         @include Flex(sb, none);
+         flex-direction: column;
+         padding: .5em;
+         margin-bottom: 1em;
+         transition: .5s;
+         cursor: pointer;
+
+         div.wrap {
+            height: 50%;
+            @include Flex(sb, none);
+            flex-direction: column;
+         }
+
+         &:not(:last-child) { margin-right: 2em; }
+
+         h5 {
+            &.name {
+               @include Clamp(.85, 3, .9);
+               text-transform: uppercase;
+               font-weight: 500;
+               margin: .5em 0 .25em 0;
+            }
+
+            &.price {
+               @include SalePriceStyle(clamp(1.1rem, 4vw, 1.5rem), 600)
+            }
+         }
+
+         figure {
+            width: 70%;
+            overflow: hidden;
+            margin: 0 auto;
+            transition: .5s;
+
+            img {
+               width: 100%;
+            }
+         }
+
+         div.product-stars-container {
+            @include Flex(none, c);
+
+            h6 {
+               color: $clr-black;
+               font-weight: 600;
+               margin-right: .25em;
+               @include Clamp(1, 4, 1.3);
+            }
+
+            span {
+               @include Rectangle(clamp(18px, 6vw, 20px));
+               
+               svg {
+                  @include FullSize;
+               }
+
+               &.active {
+                  color: orange;           
+               }
+            }
+         }
+
+         &:hover {
+            figure { transform: scale(1.2); }
+            background: darken($color: #FFFFFF, $amount: 5%);
+         }
+      }
+   }
+
+   @media (max-width: 480px) {
+      section.product-cont {
+         article.row-product {
+            width: 20%;
+            min-width: 185px;
+         }
+      }
+
+      section.wrap {
+         div.arrow { display: none; }
+      }
+   }
+}

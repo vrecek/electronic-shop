@@ -1,0 +1,99 @@
+@import '../config';
+
+section.category-section {
+   display: flex;
+   margin-bottom: 1em;
+
+   aside.categories-aside {
+      width: 22%;
+      min-width: 250px;
+      background: rgb(250, 250, 250);
+      
+      h1.h-info {
+         font-weight: 700;
+         margin-bottom: 1.2em;
+         padding: .5em 1em;
+      }
+
+      ul.first-list {
+         position: relative;
+         
+         li {
+            &.outer-li {
+               padding: .5em 1em;
+               transition: .3s;
+               cursor: pointer;
+
+               div.outer-div {
+                  @include Flex(sb, c);
+
+                  h5 {
+                     font-size: .9rem;
+                     font-family: 'Prompt', sans-serif;
+                     font-weight: 300;
+                  }
+               }
+
+               &:hover {
+                  background: royalblue;
+
+                  div.outer-div { color: $clr-white; }
+
+                  section.hidden-nav-category-content { display: flex; }
+               }
+            }
+         }
+      }
+   }
+
+   ul.categories-list {
+      width: 78%;
+      background: rgb(250, 250, 250);
+      height: max-content;
+      display: flex;
+      list-style: none;
+      border-bottom: 2px solid black;
+
+      li {
+         font-weight: 500;
+         font-family: 'Prompt', sans-serif;
+         width: 33.3%;
+         padding: 1em 0;
+         @include Flex(c, c);
+         transition: .3s;
+         cursor: pointer;
+         @include Clamp(.75, 4, 1);
+
+         span {
+            @include Rectangle(clamp(15px, 5vw, 22px));
+            @include Flex(c, c);
+            margin-left: .5em;
+
+            svg { @include FullSize; }
+         }
+
+         &:hover {
+            background: royalblue;
+            color: $clr-white;
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      flex-direction: column-reverse;
+
+      aside.categories-aside {
+         width: 100%;
+
+         ul.first-list {
+            li { position: relative; }
+         }
+         
+         h1.h-info { margin-bottom: .5em; }
+      }
+
+      ul.categories-list {
+         width: 100%;
+      }
+   }
+}

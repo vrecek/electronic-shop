@@ -1,0 +1,163 @@
+@import '../../config';
+
+nav.layout-navigation {
+   position: sticky;
+   top: 0;
+   z-index: 999999;
+
+   main.nav-main-content {
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      background: rgb(245, 245, 245);
+      padding: .75em 1em .5em 1em;
+      height: 85px;
+      @include Flex(none, c);
+
+      section {
+         height: 100%;
+
+         &.search-container {
+            width: 36%;
+            height: 90%;
+            display: flex;
+            position: relative;
+
+            ul.last-results {
+               @include SearchbarResults;
+            }
+            
+            div {
+               width: 10%;
+               aspect-ratio: 1;
+               background: orangered;
+               color: $clr-white;
+               @include Flex(c, c);
+
+               svg {
+                  width: 50%;
+                  height: 50%;
+               }
+            }
+
+            input {
+               width: 90%;
+               min-width: 240px;
+               border: 2px solid orangered;
+               background: rgb(251, 249, 249);
+               outline: 0;
+               padding: 0 1em;
+               border-right: 0;
+               border-radius: .2em 0 0 .2em;
+               font-family: 'Prompt', sans-serif;
+               font-weight: 500;
+               @include Clamp(.7, 2, 1);
+
+               &::placeholder {
+                  text-transform: uppercase;
+                  @include Clamp(.7, 2, .9);
+                  opacity: .5;
+               }
+            }
+         }
+
+         &.left-content {
+            width: 32%;
+            @include Flex(none, c);
+
+            div.menu-icon {
+               position: relative;
+               width: clamp(25px, 6vw, 30px);
+               aspect-ratio: 1;
+               cursor: pointer;
+
+               $tops: (
+                  1: '10%',
+                  2: '50%',
+                  3: '90%'
+               );
+               
+               span {
+                  position: absolute;
+                  left: 0;
+                  width: 100%;
+                  pointer-events: none;
+                  height: 3px;
+                  background: $clr-black;
+                  transition: .4s;
+
+                  @each $i, $x in $tops {
+                     &:nth-child(#{$i}) {
+                        top: #{$x};
+                     }
+                  }
+               }
+            }
+         }
+
+         &.right-content {
+            width: 32%;
+            min-width: min-content;
+            @include Flex(fe, c);
+
+            section.nav-icon {
+               @include Flex(c, c);
+               flex-direction: column;
+               margin-left: 1em;
+               cursor: pointer;
+               position: relative;
+               min-width: 45px;
+
+               h6 {
+                  @include Rectangle(clamp(17px, 4vw, 20px));
+                  @include Flex(c, c);
+                  @include Clamp(.7, 3, .8);
+                  font-weight: 600;
+                  font-family: 'Prompt', sans-serif;
+                  position: absolute;
+                  background: white;
+                  left: -4px;
+                  border-radius: 50%;
+                  border: 2px solid crimson;
+                  top: -4px;
+               }
+
+               h5.text-label {
+                  font-weight: 500;
+                  font-family: 'Prompt', sans-serif;
+                  @include Clamp(.7, 4, .8);
+                  margin-top: .5em;
+                  text-transform: uppercase;
+               }
+
+               span {
+                  width: clamp(25px, 6vw, 35px);
+                  height: clamp(25px, 6vw, 35px);
+
+                  svg {
+                     @include FullSize;
+                     transition: .3s;
+                     display: block;
+                  }
+               }
+
+               &:hover {
+                  svg {
+                     transform: scale(1.15);
+                     color: royalblue;
+                  }
+               }
+            }
+         }
+      }
+   
+      @media (max-width: 768px) {
+         justify-content: space-between;
+
+         section {
+            &.search-container {
+               display: none;
+            }
+         }
+      }
+   }
+}

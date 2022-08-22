@@ -1,0 +1,179 @@
+// font-family: 'Open Sans', sans-serif; 300 - 800
+// font-family: 'Prompt', sans-serif; 100 - 800
+
+$backgroundClr: rgb(235, 235, 235);
+$clr-white: rgb(242, 238, 238);
+$clr-black: rgb(21, 21, 21);
+
+$space: 5em;
+$initNavHeight: calc(85px + 45px);
+
+// ######################################################
+
+@mixin FullSize {
+   width: 100%;
+   height: 100%;
+}
+
+@mixin Rectangle($height) {
+   display: block;
+   height: $height;
+   aspect-ratio: 1;
+}
+
+@mixin MarginCenter($numWidth) {
+   width: $numWidth;
+   margin: 0 auto;
+}
+
+@mixin Clamp($rem1, $vw, $rem2) {
+   font-size: clamp(#{$rem1}rem, #{$vw}vw, #{$rem2}rem);
+}
+
+// ################### FLEX ##############################
+
+@mixin Flex($justify: none, $align: none) {
+   display: flex;
+   justify-content: FlexFunc($justify);
+   align-items: FlexFunc($align);
+}
+
+@function FlexFunc($val) {
+   $finalVal: none;
+
+   @if $val == sb { $finalVal: space-between; }
+   @else if $val == c { $finalVal: center }
+   @else if $val == sa { $finalVal: space-around; }
+   @else if $val == fe { $finalVal: flex-end; }
+   @else if $val == fs { $finalVal: flex-start; }
+   @else if $val == st { $finalVal: stretch; }
+
+   @return $finalVal;
+}
+
+// ######################################################
+
+@mixin ScrolLXStyle {
+   &::-webkit-scrollbar {
+      height: 10px;
+      border-radius: 1em;
+      background-color: $clr-black;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      height: 90%;
+      border-radius: 1em;
+      background: royalblue;
+   }
+}
+
+@mixin SalePriceStyle($fontRem, $fontWeight, $reverse:'false') {
+   font-family: 'Prompt', sans-serif;
+
+   span.original {
+      font-size: $fontRem;
+      font-weight: $fontWeight;
+   }
+
+   &.sale {
+      position: relative;
+      @include Flex(fe, c);
+      flex-direction: row-reverse;
+
+      @if ($reverse != 'false') {
+         justify-content: flex-start;
+      }
+      
+      span.original {
+         font-size: calc($fontRem - .25rem);
+         @include Flex(c, c);
+         height: 100%;
+         position: relative;
+         color: crimson;
+
+         &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 3px;
+            width: 130%;
+            background: red;
+         }
+      }
+
+      span.fixed {
+         margin-right: .5em;
+         font-size: $fontRem;
+         font-weight: $fontWeight;
+      }
+   }
+}
+
+@mixin BasketLocationUl {
+   display: flex;
+   list-style: none;
+   margin-bottom: 2.5em;
+   flex-wrap: wrap;
+
+   li {
+      @include Flex(none, c);
+
+      &.icon {
+         margin: 0 .75em;
+
+         span {
+            @include Rectangle(clamp(20px, 4vw, 25px));
+            svg { @include FullSize; }
+         }
+
+         @media (max-width: 480px) { margin: 0; }
+      }
+
+      &.text {
+         font-weight: 600;
+         text-transform: uppercase;
+         @include Clamp(.8, 4, .9);
+         font-family: 'Prompt', sans-serif;
+         transition: .2s;
+         cursor: pointer;
+
+         &.current {
+            pointer-events: none;
+            color: royalblue;
+         }
+
+         &:hover {
+            color: cornflowerblue;
+         }
+      } 
+   }
+}
+
+@mixin SearchbarResults {
+   list-style: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100%;
+   height: max-content;
+   border: 2px solid orangered;
+   border-radius: 0 0 .15em .15em;
+   border-top: 0;
+   background: rgb(252, 252, 252);
+   display: none;
+
+   li {
+      padding: .5em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: .3s;
+      font-family: 'Open Sans', sans-serif;
+      @include Clamp(.9, 4, 1);
+
+      &:hover {
+         background: rgb(239, 239, 239);
+      }
+   }
+}

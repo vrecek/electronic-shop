@@ -1,0 +1,60 @@
+@import '../config';
+
+section.inputs-new-locations {
+   margin-top: 2em;
+   border-top: 1px solid rgb(174, 174, 174);
+   padding-top: 1.5em;
+
+   div.save {
+      @include Flex(none, c);
+      margin-top: 1em;
+
+      label {
+         margin-left: .5em;
+         font-size: .85rem;
+         font-family: 'Prompt', sans-serif;
+         font-weight: 500;
+         cursor: pointer;
+         color: rgb(38, 38, 38);
+      }
+
+      input { cursor: pointer; }
+   }
+
+   div.input {
+      margin-bottom: 1em;
+
+      h5 {
+         @include Clamp(.8, 4, .9);
+         font-weight: 500;
+         font-family: 'Prompt', sans-serif;
+         color: rgb(120, 120, 120);
+         text-transform: uppercase;
+      }
+
+      input {
+         width: 100%;
+         font-size: 1rem;
+         padding: .75em;
+         outline: 0;
+         border: 1px solid rgb(230, 230, 230);
+
+         &::-webkit-outer-spin-button,
+         &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+         }
+      }
+   }
+
+   div.delivery-wrap {
+      @include Flex(sb, c);
+
+      div {
+         width: 48%;
+      }
+   
+      input {
+         width: 100%;
+      }
+   }
+}

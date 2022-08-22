@@ -1,0 +1,65 @@
+@import './config';
+
+* {
+   margin: 0;
+   padding: 0;
+   font-weight: 400;
+   font-size: 16px;
+   box-sizing: border-box;
+}
+
+div.App {
+   overflow-x: hidden;
+}
+
+body {
+   background: $backgroundClr;
+   min-height: 100vh;
+   font-family: 'Open Sans', sans-serif;
+   scroll-behavior: smooth;
+   color: $clr-black;
+   width: 100vw;
+   overflow-x: hidden;
+
+   &::-webkit-scrollbar {
+      width: 4px;
+      background: $clr-black;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      width: 100%;
+      background: $clr-white;
+   }
+}
+
+main.blank-page {
+   height: 100vh;
+   @include Flex(sa, c);
+   flex-direction: column;
+
+   section {
+      width: 80%;
+      background: rgb(204, 204, 204);
+      position: relative;
+
+      &::before {
+         content: '';
+         width: 95%;
+         background: rgb(189, 189, 189);
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      &.big {
+         height: 50vh;
+         &::before { height: 80%;}
+      }
+
+      &.small {
+         height: 10vh;
+         &::before { height: 50%;}
+      }
+   }
+}

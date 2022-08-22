@@ -1,0 +1,269 @@
+@import '../config';
+
+section.content {
+   width: 95%;
+   margin: 0 auto;
+   padding-bottom: 2em;
+
+   section.product-details {
+      p {
+         font-family: 'Prompt', sans-serif;
+         font-weight: 400;
+         width: 750px;
+         max-width: 100%;
+         text-align: justify;
+         @include Clamp(.85, 3, 1);
+      }
+
+      h2 {
+         font-weight: 700;
+         text-transform: uppercase;
+         margin: 2em 0 1em 0; 
+         font-size: 1.2rem;
+      }
+
+      table {
+         width: 100%;
+         border-collapse: collapse;
+
+         tbody {
+            td {
+               font-weight: 400;
+               font-family: 'Prompt', sans-serif;
+            }
+         }
+
+         td {
+            width: 50%;
+            padding: 1em;
+            display: inline-block;
+            @include Clamp(.8, 3, 1);
+         }
+
+         tr {
+            background: rgb(241, 239, 239);
+            
+            &:nth-child(odd) {
+               background: white;
+            }
+         }
+
+         thead {
+            tr {
+               background: royalblue !important;
+
+               td {
+                  font-weight: 700;
+                  text-transform: uppercase;
+                  color: $clr-white;
+               }
+            }
+         }
+      }
+   }
+
+   section.product-opinions {
+      form {
+         margin: 1em 0 5em 0;
+         width: 500px;
+         max-width: 100%;
+         position: relative;
+
+         h6.err-result {
+            position: absolute;
+            top: 100%;
+            color: red;
+            font-weight: 500;
+            font-family: 'Prompt', sans-serif;
+         }
+
+         div.wrap {
+            @include Flex(sb, c);
+
+            div.stars {
+               display: flex;
+
+               span {
+                  @include Rectangle(clamp(28px, 5vw, 30px));
+                  cursor: pointer;
+                  transition: .3s;
+                  color: grey;
+
+                  svg {
+                     pointer-events: none;
+                     @include FullSize;
+                  }
+
+                  &.active {
+                     color: gold;
+                  }
+               }
+            }
+         }
+
+         button {
+            width: clamp(90px, 15vw, 120px);
+            background: royalblue;
+            border-radius: .25em;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            padding: clamp(.25em, 3vw, .75em) 0;
+            transition: .3s;
+            margin-top: .5em;
+
+            label {
+               color: $clr-white;
+               font-weight: 600;
+               @include Clamp(.8, 3, 1);
+            }
+
+            &:hover { background: darken(royalblue, 10%); }
+         }
+         
+         textarea {
+            display: block;
+            width: 100%;
+            height: 150px;
+            resize: none;
+            padding: .75em;
+            outline: 0;
+            border: 1px solid $clr-black;
+            border-radius: .25em;
+            @include Clamp(.9, 3, 1);
+
+            &::placeholder {
+               font-size: .9rem;
+            }
+         }
+      }
+
+      section.rate-summary {
+         div.wrap {
+            @include Flex(none, c);
+
+            div {
+               @include Flex(none, c);
+            }
+
+            h6,
+            h3 {
+               @include Clamp(1, 4, 1.2);
+            }
+
+            span {
+               @include Rectangle(clamp(25px, 7vw, 40px));
+               color: rgb(213, 213, 213);
+
+               svg {
+                  @include FullSize;
+               }
+
+               &.active { color: gold; }
+            }
+
+            h3 { margin-left: 1em; font-weight: 500; }
+            h6 { margin-right: .5em; color: $clr-black; font-weight: 700; }
+         }
+      }
+
+      section.comment-section {
+         margin-top: 1em;
+
+         article.comment {
+            border-bottom: 1px solid grey;
+            margin-bottom: 3em;
+            background: white;
+            padding: 1em .5em;
+            width: 650px;
+            max-width: 100%;
+            
+            p {
+               font-family: 'Prompt', sans-serif;
+               @include Clamp(.85, 4, .95);
+               margin-top: .5em;
+               width: 50%;
+            }
+      
+            div.info {
+               @include Flex(none, c);
+
+               div { display: flex; }
+
+               h6 {
+                  margin-left: .5em;
+                  font-weight: 400;
+                 
+                  @include Clamp(.9, 4, .95);
+
+                  &.date {
+                     border-left: 1px solid black;
+                     border-right: 1px solid black;
+                     padding: 0 .5em;
+                  }
+               }
+
+               span {
+                  @include Rectangle(20px);
+                  color: grey;
+
+                  svg { @include FullSize; }
+
+                  &.active { color: gold; }
+               }
+
+               @media (max-width: 480px) {
+                  flex-direction: column;
+                  align-items: flex-start;
+                  margin-bottom: 1.5em;
+
+                  h6 {
+                     &:last-child { margin: 0; }
+
+                     &.date {
+                        border-right: 0;
+                     }
+                  }
+
+                  div {
+                     margin-top: .25em;
+                     flex-direction: row-reverse;
+                  }
+               }
+            }
+         }
+      }
+
+      h3.comm-h {
+         font-size: 1.4rem;
+         font-weight: 700;
+         margin-top: 1.5em;
+      }
+   }
+}
+
+ul.select-current-section {
+   display: flex;
+   width: 95%;
+   margin: 0 auto;
+   border-top: 3px solid orange;
+   list-style: none;
+   margin-bottom: 3em;
+   background: white;
+
+   li {
+      @include Clamp(.9, 4, 1.1);
+      font-weight: 500;
+      padding: .75em;
+      width: 150px;
+      text-transform: uppercase;
+      cursor: pointer;
+      letter-spacing: 1px;
+      text-align: center;
+
+      &.active {
+         border-bottom: 3px solid orange;
+         pointer-events: none;
+      }
+   }
+}

@@ -1,0 +1,148 @@
+@import '../config';
+
+section.main.products-section {
+   width: 65%;
+   background: whitesmoke;
+   padding: 0 3em;
+   overflow: scroll;
+   overflow-x: hidden;
+
+   &::-webkit-scrollbar {
+      width: 6px;
+      background: $clr-white;
+   }
+
+   &::-webkit-scrollbar-thumb {
+      width: 100%;
+      background: royalblue;
+   }
+
+   section.products-container {
+      table {
+         width: 100%;
+
+         thead {
+            text-transform: uppercase;
+
+            td { font-weight: 400; }
+         }
+
+         tr { position: relative; }
+
+         td {
+            width: 30%;
+            padding: 1em 0;
+            display: inline-block;
+            font-family: 'Prompt', sans-serif;
+            font-weight: 500;
+            @include Clamp(.7, 4, 1);
+
+            &.quantity {
+               div.buttons {
+                  position: absolute;
+                  top: 105%;
+                  left: 0;
+                  @include Flex(sb, c);
+                  width: 100%;
+
+                  span {
+                     @include Rectangle(18px);
+                     border-radius: .15em;
+                     cursor: pointer;
+                     background: white;
+                     border: 1px solid rgb(170, 170, 170);
+                     padding: .25em;
+                     @include Flex(c, c);
+
+                     &:first-child { margin-right: 1.5em }
+
+                     svg {
+                        @include FullSize;
+                        pointer-events: none;
+                     }
+                  }
+               }
+
+               div.num {
+                  width: clamp(35px, 10vw, 60px);
+                  position: relative;
+                  aspect-ratio: 1;
+                  background: white;
+                  border-radius: .25em;
+                  border: 1px solid black;
+                  @include Flex(c, c);
+
+                  h6 { @include Clamp(.9, 4, 1); }
+               }
+            }
+
+            &.name { 
+               height: 100%;
+               display: inline-block;
+            }
+
+            &.price {
+               h5 {
+                  @include SalePriceStyle(clamp(.85rem, 4vw, 1.2rem), 500, 'true');
+               }
+            }
+
+            figure {
+               width: 100%;
+               aspect-ratio: 1;
+               overflow: hidden;
+               @include Flex(c, c);
+
+               img {
+                  width: 100%;
+               }
+            }
+
+            &:nth-child(1) { width: 13%; }
+            &:nth-child(2) { width: 47%; padding: 0 2em; }
+            &:nth-child(3) { width: 23%; }
+            &:nth-child(4) { width: 17%; text-align: right }
+         }
+      }
+   }
+
+   div.sect-info {
+      @include Flex(sb, c);
+
+      h2 {
+         @include Clamp(1.2, 4, 1.75);
+         font-weight: 600;
+         font-family: 'Prompt', sans-serif;
+      }
+   }
+
+   @media (max-width: 1000px) {
+      width: 100%;
+      padding: 0 1em;
+      padding-bottom: 5em;
+   }
+
+   @media (max-width: 480px) {
+      section.products-container {
+         table {
+            td {
+               &.quantity {
+                  div.buttons {
+                     span { &:first-child { margin: 0; } }
+                  }
+               }
+
+               &.price h5 {
+                  &.sale {
+                     flex-direction: column;
+
+                     span.fixed { margin: 0 !important; }
+
+                     span.original { font-size: clamp(.85rem, 4vw, 1.2rem); }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

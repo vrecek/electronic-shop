@@ -1,0 +1,41 @@
+@import '../config';
+
+section.saved-locations {
+   h2.no-saved {
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.2rem;
+      margin: 2em 0 1.5em 0;
+      font-family: 'Prompt', sans-serif;
+   }
+
+   section.available-locations {
+      margin-top: 2em;
+
+      article {
+         background: white;
+         padding: .75em;
+         &:not(:last-child) { margin-bottom: .75em; }
+         cursor: pointer;
+         transition: .2s;
+
+         div {
+            display: flex;
+            margin-bottom: .25em;
+            pointer-events: none;
+
+            h4 {
+               font-weight: 500;
+               @include Clamp(.9, 4, 1);
+               font-family: 'Prompt', sans-serif;
+            }
+         }
+
+         &.active {
+            background: royalblue;
+            color: $clr-white;
+            pointer-events: none;
+         }
+      }
+   }
+}

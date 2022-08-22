@@ -1,0 +1,152 @@
+@import '../config';
+
+form.order-summary {
+   width: 70%;
+   width: 1050px;
+   max-width: 99%;
+   background: rgb(252, 252, 252);
+   padding: 2em;
+   margin: 2em auto;
+   position: relative;
+
+   h6.submit-result {
+      font-family: 'Prompt', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: red;
+      margin-top: 1em;
+   }
+
+   button.submit-order {
+      border: 0;
+      background: royalblue;
+      cursor: pointer;
+      transition: .3s;
+      padding: .75em 1.5em;
+      margin-top: 2em;
+      border-radius: .15em;
+
+      label {
+         font-size: 1.1rem;
+         color: $clr-white;
+         font-weight: 500;
+         font-family: 'Prompt', sans-serif;
+      }
+
+      &:hover { background: darken(royalblue, 10%); }
+   }
+
+   ul.current-location {
+      @include BasketLocationUl;
+   }
+
+   div.wrap {
+      @include Flex(sb, none);
+
+      section.cont {
+         width: 45%;
+         background: rgb(242, 242, 242);
+         padding: 1em;
+         border-radius: .25em;
+         height: max-content;
+
+         h4.info {
+            font-weight: 600;
+            @include Clamp(1.1, 4, 1.3);
+            margin-bottom: 1.5em;
+         }
+
+         &.delivery-section {
+            section.delivery-method {
+               div {
+                  @include Flex(sb, c);
+                  background: white;
+                  padding: 1em;
+                  &:not(:last-child) { margin-bottom: .5em; }
+
+                  label {
+                     font-weight: 500;
+                     cursor: pointer;
+                     font-family: 'Prompt', sans-serif;
+                     font-size: .9rem;
+                  }
+
+                  input { cursor: pointer; @include Rectangle(clamp(15px, 5vw, 20px)) }
+               }
+            }
+
+            h5.address {
+               text-transform: uppercase;
+               font-weight: 700;
+               font-size: .8rem;
+               color: grey;
+               margin-bottom: .75em;
+            }
+         }
+
+         &.payment-section {
+            div.payment-method {
+               @include Flex(sb, c);
+               padding: .5em;
+               width: 100%;
+               background: white;
+               height: 70px;
+
+               &:not(:last-child) { margin-bottom: 1em; }
+
+               div {
+                  @include Flex(none, c);
+                  height: 100%;
+                  
+                  label {
+                     font-weight: 500;
+                     font-family: 'Prompt', sans-serif;
+                     @include Clamp(.8, 4, .9);
+                     cursor: pointer;
+                  }
+               }
+
+               input { cursor: pointer; @include Rectangle(clamp(15px, 5vw, 20px)) }
+
+               figure {
+                  height: 100%;
+                  aspect-ratio: 1;
+                  @include Flex(c, c);
+                  overflow: hidden;
+                  margin-right: 1.5em;
+
+                  img {
+                     width: 100%;
+                  }
+               }
+
+               &.blank {
+                  pointer-events: none;
+                  position: relative;
+
+                  &:before {
+                     content: '';
+                     position: absolute;
+                     left: 0;
+                     top: 0;
+                     width: 100%;
+                     height: 100%;
+                     background: rgba(255, 255, 255, .8);
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      div.wrap { 
+         flex-direction: column; 
+         section.cont { width: 100%;}
+      }
+   }
+
+   @media (max-width: 480px) {
+      padding: 1em .5em;
+   }
+}

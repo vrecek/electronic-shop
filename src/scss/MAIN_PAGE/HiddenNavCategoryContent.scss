@@ -1,0 +1,47 @@
+@import '../config';
+
+section.hidden-nav-category-content {
+   background: rgb(250, 250, 250);
+   padding: 1em;
+   border: 1px solid black;
+   border-left: 0;
+   border-right: 0;
+   position: absolute;
+   top: 0;
+   left: 100%;
+   min-height: 100%;
+   width: calc(100vw - 101%);
+   display: none;
+   justify-content: space-around;
+
+   ul {
+      list-style: none;
+
+      li {
+         @include Clamp(.8, 4, 1);
+
+         &:first-child {
+            pointer-events: none;
+            font-weight: 500;
+            font-family: 'Prompt', sans-serif;
+            margin-bottom: .5em;
+            border-bottom: 1px solid black;
+            @include Clamp(.85, 4, 1.25);
+            letter-spacing: 1px;
+         }
+
+         margin-bottom: .5em;
+         
+         &:hover {
+            color: royalblue;
+         }
+      }
+   }
+
+   @media (max-width: 768px) {
+      left: 0;
+      top: 100%;
+      width: 100%;
+      z-index: 99;
+   }
+}

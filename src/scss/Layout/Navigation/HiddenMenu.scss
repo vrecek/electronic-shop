@@ -1,0 +1,86 @@
+@import '../../config';
+
+aside.menu {
+   position: absolute;
+   width: 350px;
+   max-width: 100%;
+   background: rgb(255, 255, 255);
+   border-left: 2px solid rgb(215, 215, 215);
+   border-bottom: 2px solid rgb(215, 215, 215);
+   border-radius: 0 0 0 .2em;
+   height: 550px;
+   padding: .75em;
+   right: 0;
+   top: 100%;
+   z-index: 999;
+   transform: translateX(100%);
+   transition: .4s;
+   font-family: 'Prompt', sans-serif;
+
+   section.menu-search {
+      position: relative;
+      margin-bottom: 2em;
+
+      ul.last-results {
+         @include SearchbarResults;
+      }
+
+      input {
+         width: 100%;
+         border-radius: .2em;
+         padding: .5em;
+         outline: 0;
+         border: 2px solid orangered;
+         @include Clamp(.9, 4, 1);
+         font-family: 'Prompt', sans-serif;
+
+         &::placeholder {
+            font-size: .75rem;
+            text-transform: uppercase;
+            color: rgb(117, 117, 117);
+            font-weight: 500;
+         }
+      }
+
+      span {
+         @include Rectangle(20px);
+         position: absolute;
+         color: orangered;
+         right: 4px;
+         top: 50%;
+         transform: translateY(-50%);
+
+         svg { @include FullSize; }
+      }
+   }
+
+   ul:not(.last-results) {
+      list-style: none;
+
+      li {
+         &:not(.margin) {
+            @include Clamp(.85, 4, .95);
+            margin-bottom: .75em;
+            color: rgb(129, 129, 129);
+            text-transform: uppercase;
+            border-bottom: 2px solid rgb(215, 215, 215);
+            cursor: pointer;
+            transition: .3s;
+
+            &:hover {
+               color: royalblue;
+            }
+         }
+
+         &.margin {
+            margin: 2em 0;
+         }
+      }
+   }
+
+   h6.is-logged {
+      font-weight: 500;
+      margin-bottom: 2em;
+      @include Clamp(.8, 4, 1);
+   }
+}

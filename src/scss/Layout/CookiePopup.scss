@@ -1,0 +1,67 @@
+@import '../config';
+
+section.cookie-popup {
+   position: fixed;
+   top: 0;
+   left: 0;
+   @include FullSize;
+   @include Flex(c, c);
+   z-index: 999999;
+   background: rgba(255, 255, 255, .7);
+
+   section.wrap {
+      width: 400px;
+      border-radius: .2em;
+      background: white;
+      @include Flex(sb, c);
+      border: 1px solid rgb(189, 189, 189);
+      flex-direction: column;
+      padding: 1.5em;
+
+      span.icon {
+         @include Rectangle(clamp(50px, 15vw, 80px));
+
+         svg { @include FullSize; }
+      }
+
+      button {
+         border-radius: .5em;
+         padding: .75em 0;
+         outline: 0;
+         border: 2px solid royalblue;
+         width: 150px;
+         cursor: pointer;
+         transition: .3s;
+         background: none;
+         margin-top: 3em;
+
+         label {
+            color: royalblue;
+            @include Clamp(.9, 4, 1);
+            font-family: 'Prompt', sans-serif;
+            font-weight: 500;
+         }
+
+         &:hover {
+            background: royalblue;
+            border-color: transparent;
+
+            label { color: $clr-white; }
+         }
+      }
+
+      h1 {
+         font-weight: 600;
+         margin-bottom: .25em;
+         @include Clamp(1.5, 5, 1.75);
+         text-align: center;
+      }
+
+      p {
+         @include Clamp(.9, 4, 1);
+         font-family: 'Prompt', sans-serif;
+         color: rgb(110, 110, 110);
+         text-align: center;
+      }
+   }
+}

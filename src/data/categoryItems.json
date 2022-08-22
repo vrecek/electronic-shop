@@ -1,0 +1,318 @@
+{
+   "pc": [
+      [
+         {
+            "name": "Computers",
+            "url": "/"
+         },
+
+         {
+            "name": "Gaming PCs",
+            "url": "/search/ct/pc"
+         },
+
+         {
+            "name": "iMacs",
+            "url": "/search/ct/imac"
+         }
+      ],
+
+      [
+         {
+            "name": "Other",
+            "url": "/"
+         },
+
+         {
+            "name": "Games",
+            "url": "/search/ct/games"
+         }
+      ]
+   ],
+
+   "phone": [
+      [
+         {
+            "name": "Smartphones",
+            "url": "/"
+         },
+
+         {
+            "name": "iPhone",
+            "url": "/search/ct/iphone"
+         },
+
+         {
+            "name": "Samsung",
+            "url": "/search/ct/samsung"
+         },
+
+         {
+            "name": "Xiaomi",
+            "url": "/search/ct/xiaomi"
+         },
+
+         {
+            "name": "Huawei",
+            "url": "/search/ct/huawei"
+         },
+
+         {
+            "name": "Sony",
+            "url": "/search/ct/sony"
+         },
+
+         {
+            "name": "LG",
+            "url": "/search/ct/lg"
+         }
+      ],
+
+      [
+         {
+            "name": "Other",
+            "url": "/"
+         },
+
+         {
+            "name": "Tablets",
+            "url": "/search/ct/tablet"
+         }
+      ]
+   ],
+
+   "laptop": [
+      [
+         {
+            "name": "Laptops",
+            "url": "/"
+         },
+
+         {
+            "name": "Gaming laptops",
+            "url": "/search/ct/gaming-laptop"
+         },
+
+         {
+            "name": "Office laptops",
+            "url": "/search/ct/office-laptop"
+         }
+      ]
+   ],
+
+   "keyboard": [
+      [
+         {
+            "name": "Keyboards",
+            "url": "/"
+         },
+
+         {
+            "name": "Membrane keyboards",
+            "url": "/search/ct/membrane"
+         },
+
+         {
+            "name": "Mechanical keyboards",
+            "url": "/search/ct/mechanical"
+         }
+      ]
+   ],
+
+   "mouse": [
+      [
+         {
+            "name": "Types",
+            "url": "/"
+         },
+
+         {
+            "name": "Wireless mouses",
+            "url": "/search/ct/wirelessmouse"
+         },
+
+         {
+            "name": "Wired mouses",
+            "url": "/search/ct/wiredmouse"
+         }
+      ],
+
+      [
+         {
+            "name": "Brands",
+            "url": "/"
+         },
+
+         {
+            "name": "Logitech",
+            "url": "/search/ct/logitech"
+         },
+
+         {
+            "name": "Razer",
+            "url": "/search/ct/razer"
+         },
+
+         {
+            "name": "Steelseries",
+            "url": "/search/ct/steelseries"
+         }
+      ]
+   ],
+
+   "headphone": [
+      [
+         {
+            "name": "Types",
+            "url": "/"
+         },
+
+         {
+            "name": "Wireless headphones",
+            "url": "/search/ct/wireless-headphone"
+         },
+
+         {
+            "name": "Wired headphones",
+            "url": "/search/ct/wired-headphone"
+         },
+
+         {
+            "name": "Bluetooth",
+            "url": "/search/ct/bluetooth-headphone"
+         },
+
+         {
+            "name": "iPods",
+            "url": "/search/ct/ipods"
+         }
+      ]
+   ],
+
+   "household": [
+      [
+         {
+            "name": "Equipment",
+            "url": "/"
+         },
+
+         {
+            "name": "TVs",
+            "url": "/search/ct/tv"
+         },
+
+         {
+            "name": "Radios",
+            "url": "/search/ct/radio"
+         },
+
+         {
+            "name": "Printers",
+            "url": "/search/ct/printer"
+         },
+
+         {
+            "name": "Routers",
+            "url": "/search/ct/router"
+         },
+
+         {
+            "name": "Speakers",
+            "url": "/search/ct/speakers"
+         },
+
+         {
+            "name": "Digitial clocks",
+            "url": "/search/ct/clock"
+         }
+      ],
+
+      [
+         {
+            "name": "Kitchen equipment",
+            "url": "/"
+         },
+
+         {
+            "name": "Microwaves",
+            "url": "/search/ct/microwave"
+         },
+
+         {
+            "name": "Fridges",
+            "url": "/search/ct/fridge"
+         }
+      ]
+   ],
+
+   "other": [
+      [
+         {
+            "name": "Components",
+            "url": "/"
+         },
+
+         {
+            "name": "Graphic cards",
+            "url": "/search/ct/gpu"
+         },
+
+         {
+            "name": "Processors",
+            "url": "/search/ct/cpu"
+         },
+
+         {
+            "name": "RAM",
+            "url": "/search/ct/ram"
+         },
+
+         {
+            "name": "HDD",
+            "url": "/search/ct/hdd"
+         },
+
+         {
+            "name": "SSD",
+            "url": "/search/ct/ssd"
+         },
+
+         {
+            "name": "Power supply",
+            "url": "/search/ct/powersupply"
+         },
+
+         {
+            "name": "Cables",
+            "url": "/search/ct/cables"
+         },
+
+         {
+            "name": "Fans",
+            "url": "/search/ct/fans"
+         },
+
+         {
+            "name": "Motherboards",
+            "url": "/search/ct/motherboard"
+         }
+      ],
+
+      [
+         {
+            "name": "Games",
+            "url": "/"
+         },
+
+         {
+            "name": "PC games",
+            "url": "/search/ct/pcgames"
+         },
+
+         {
+            "name": "Console games",
+            "url": "/search/ct/consolegames"
+         }
+      ]
+   ]
+}

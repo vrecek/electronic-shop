@@ -1,0 +1,79 @@
+@import '../config';
+
+div.final-wrap {
+   height: calc(100vh - 45px);
+   @include Flex(c, c);
+
+   main.ordered-message {
+      width: 1000px;
+      max-width: 100%;
+      background: rgb(252, 252, 252);
+      padding: 2em;
+
+      ul.current-location {
+         @include BasketLocationUl;
+      }
+
+      button {
+         margin: 0 auto;
+         display: block;
+         padding: .75em 1.5em;
+         background: royalblue;
+         outline: 0;
+         border: 0;
+         cursor: pointer;
+         transition: .3s;
+         border-radius: .15em;
+
+         label {
+            color: $clr-white;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: 'Prompt', sans-serif;
+         }
+
+         &:hover { background: darken(royalblue, 10%); }
+      }
+
+      p {
+         text-align: center;
+         font-weight: 500;
+         @include Clamp(.85, 4, 1);
+      }
+
+      div {
+         margin-bottom: 4em;
+         margin-top: 2em;
+         @include Flex(c, c);
+
+         span {
+            @include Rectangle(clamp(25px, 6vw, 35px));
+            svg { @include FullSize; }
+         }
+
+         h5 {
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 .5em;
+            @include Clamp(.85, 4, 1);
+            text-align: center;
+         }
+      }
+
+      h1 {
+         text-align: center;
+         @include Clamp(1.5, 6, 2.5);
+         font-family: 'Prompt', sans-serif;
+         font-weight: 700;
+         margin-bottom: 2em;
+      }
+   }
+
+   @media (max-width: 480px) {
+      height: auto;
+
+      main.ordered-message {
+         padding: 1.5em .5em;
+      }
+   }
+}

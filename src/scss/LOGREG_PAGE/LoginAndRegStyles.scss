@@ -1,0 +1,176 @@
+@import '../config';
+
+main.login-page,
+main.register-page {
+   section.wrap {
+      min-height: calc(100vh - 45px);
+      @include Flex(c, c);
+      padding: 0 1em;
+
+      section.left-section,
+      form {
+         height: 80vh;
+         padding: 2em;
+      }
+
+      section.left-section {
+         width: 450px;
+         background-size: cover;
+
+         p, li {
+            font-weight: 600;
+            font-family: 'Prompt', sans-serif;
+            text-shadow: 0 0 1px black, 0 0 2px black;
+            color: $clr-white;
+            @include Clamp(.9, 1.5, 1);
+         }
+
+         li::before {
+            content: "\2022";
+            color: orangered;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+         }
+
+         h1 {
+            font-weight: 800;
+            @include Clamp(1.25, 3.5, 2.25);
+            color: $clr-white;
+            text-shadow: 0 0 2px black, 0 0 3px black;
+            margin-bottom: 1em;
+         }
+      }
+
+      form {
+         width: 650px;
+         background: whitesmoke;
+         position: relative;
+         @include Flex(c, c);
+
+         h6 {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: royalblue;
+            color: $clr-white;
+            text-align: center;
+            font-family: 'Prompt', sans-serif;
+            font-weight: 500;
+            padding: 1em 0;
+         }
+
+         h5,
+         a {
+            transition: .3s;
+            cursor: pointer;
+
+            &.center {
+               text-align: center;
+            }
+
+            &:hover {
+               color: royalblue;
+            }
+         }
+
+         button {
+            width: 100%;
+            margin: 1.5em 0 1em 0;
+            padding: .75em 0;
+            outline: 0;
+            border: 0;
+            border-radius: .15em;
+            background: royalblue;
+            cursor: pointer;
+            transition: .3s;
+
+            label {
+               color: $clr-white;
+               font-weight: 700;
+               font-family: 'Prompt', sans-serif;
+            }
+
+            &:hover { background: darken(royalblue, 10%); }
+         }
+
+         h2 {
+            font-weight: 800;
+            @include Clamp(1.25, 4, 2.25);
+            margin-bottom: .5em;
+            font-family: 'Prompt', sans-serif;
+         }
+
+         h5,
+         label,
+         a {
+            @include Clamp(.75, 4, .9);
+            font-weight: 500;
+            font-family: 'Prompt', sans-serif;
+            display: block;
+         }
+
+         a {
+            color: $clr-black;
+            text-decoration: none;
+         }
+
+         div.input-div {
+            position: relative;
+
+            &:not(:first-child) {
+               margin-top: 1em;
+            }
+
+            span.icon {
+               position: absolute;
+               left: 10px;
+               @include Rectangle(clamp(20px, 6vw, 25px));
+               top: 50%;
+               transform: translateY(-50%);
+
+               svg { @include FullSize; }
+            }
+
+            input {
+               width: 100%;
+               padding: .75em .5em .75em 40px;
+               outline: 0;
+               border: 1px solid $clr-black;
+               border-radius: 1em;
+               @include Clamp(.9, 4, 1);
+
+               &::placeholder {
+                  font-size: .8rem;
+                  text-transform: uppercase;
+                  opacity: .7;
+                  font-family: 'Prompt', sans-serif;
+               }
+            }
+         }
+      }
+
+      @media (max-width: 768px) {
+         flex-direction: column-reverse;
+         padding: 0;
+
+         form,
+         section.left-section { 
+            width: 100%; 
+            
+         }
+         form { padding: 1em; }
+      }
+
+      @media (max-width: 480px) {
+         iframe { 
+            transform: scale(.7);
+         }
+
+         section.left-section { 
+            height: auto;
+         }
+      }
+   }
+}

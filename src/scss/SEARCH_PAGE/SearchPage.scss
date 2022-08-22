@@ -1,0 +1,322 @@
+@import '../config';
+
+main.search-page {
+   min-height: calc(100vh - 130px);
+
+   section.products {
+      min-height: calc(100vh - 130px);
+      display: flex;
+
+      section.products-section {
+         width: 79%;
+         padding: 1em;
+
+         section.products-container {
+            article.product {
+               background: rgb(246, 246, 246);
+               border-radius: .15em;
+               display: flex;
+
+               button {
+                  width: 220px;
+                  max-width: 100%;
+                  padding: .75em 0;
+                  background: royalblue;
+                  border-radius: .5em;
+                  border: 0;
+                  outline: 0;
+                  cursor: pointer;
+                  transition: .3s;
+
+                  label {
+                     font-weight: 500;
+                     font-family: 'Prompt', sans-serif;
+                     @include Clamp(.85, 3, 1);
+                     color: $clr-white;
+                     text-transform: uppercase;
+                  }
+
+                  &:hover {
+                     background: darken(royalblue, 10%);
+                  }
+               }
+
+               section.text-wrap { 
+                  @include Flex(sb, none); 
+                  flex-direction: column; 
+                  padding: 1em 0;
+               }
+
+               h2.name {
+                  @include Clamp(1.25, 4, 2);
+                  font-family: 'Prompt', sans-serif;
+                  font-weight: 600;
+               }
+
+               figure {
+                  margin-right: 1em;
+                  width: 35%;
+                  aspect-ratio: 1;
+                  overflow: hidden;
+                  @include Flex(c, c);
+
+                  img {
+                     width: 90%;
+                  }
+               }
+
+               h5.price {
+                  @include SalePriceStyle(clamp(1.25rem, 4vw, 2rem), 500);
+               }
+
+               section.tags {
+                  display: flex;
+                  margin: .5em 0 1em 0;
+
+                  span {
+                     &:not(:last-child) { margin-right: .5em; }
+
+                     background: $clr-white;
+                     border-radius: .15em;
+                     background: rgb(20, 201, 135);
+                     padding: .5em;
+                     min-width: 70px;
+                     text-align: center;
+                     @include Clamp(.75, 4, 1);
+                     font-weight: 600;
+                     font-family: 'Prompt', sans-serif;
+                     cursor: pointer;
+                     transition: .3s;
+                     color: $clr-white;
+
+                     &:hover {
+                        transform: scale(0.9)
+                     }
+                  }
+               }
+
+               div.product-stars-container {
+                  @include Flex(none, c);
+
+                  h6 {
+                     color: $clr-black;
+                     @include Clamp(1.25, 4, 1.75);
+                     font-weight: 700;
+                     margin-right: .2em;
+                  }
+
+                  span {
+                     @include Rectangle(clamp(25px, 6vw, 30px));
+                     &.active { color: rgb(247, 211, 7); }
+
+                     svg { @include FullSize; }
+                  }
+               }
+               
+               &:not(:last-child) { margin-bottom: 2em; }
+            }
+         }
+
+         h1.searched-info {
+            padding-bottom: .75em;
+
+            &, span {
+               @include Clamp(1.25, 4, 1.5);
+               font-weight: 400;
+               font-family: 'Prompt', sans-serif;
+            }
+
+            span {
+               font-style: italic;
+            }
+         }
+      }
+
+      aside.filters {
+         width: 21%;
+         background: whitesmoke;
+         padding: 1em;
+         position: sticky;
+         top: 0;
+         transition: .3s;
+
+         span.arrow {
+            position: absolute;
+            left: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            @include Rectangle(25px);
+            cursor: pointer;
+            background: royalblue;
+            color: $clr-white;
+            display: none;
+            transition: .3s;
+
+            svg {
+               @include FullSize;
+               pointer-events: none;
+            }
+         }
+
+         button {
+            width: 100%;
+            outline: 0;
+            cursor: pointer;
+            transition: .3s;
+            margin-top: 1em;
+            padding: .5em 0;
+            border-radius: .1em;
+            border: 0;
+
+            &.reset { 
+               background: royalblue;
+               &:hover {
+                  background: darken(royalblue, 5%);
+               } 
+            }
+            &.apply { 
+               background: purple;
+
+               &:hover {
+                  background: darken(purple, 5%);
+               } 
+            }
+
+            label {
+               font-weight: 500;
+               text-transform: uppercase;
+               font-family: 'Prompt', sans-serif;
+               color: $clr-white;
+            }
+         }
+
+         section.select {
+            background: whitesmoke;
+            padding: 1em;
+
+            h2 {
+               text-transform: uppercase;
+               font-weight: 500;
+               font-family: 'Prompt', sans-serif;
+               @include Clamp(1, 4, 1.25);
+            }
+
+            div.wrap {
+               div {
+                  font-family: 'Prompt', sans-serif;
+                  @include Flex(none, c);
+                  background: rgb(255, 255, 255);
+                  padding: .5em;
+                  border-radius: .2em;
+
+                  label { 
+                     cursor: pointer; 
+                     margin-left: .25em;
+                     @include Clamp(.9, 3, 1); 
+                  }
+               }
+            }
+         }
+
+         h1 {
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 1.25em;
+         }
+      }
+   }
+
+   section.no-products {
+      @include FullSize;
+      height: calc(100vh - 130px);
+      @include Flex(c, c);
+      flex-direction: column;
+      background: white;
+      padding: 0 .5em;
+
+      h1,
+      span {
+         @include Clamp(1.25, 4, 2);
+         font-family: 'Prompt', sans-serif;
+         font-weight: 500;
+         text-align: center;
+      }
+
+      span {
+         font-style: italic;
+         font-weight: 400;
+      }
+
+      figure {
+         width: 20%;
+         min-width: 120px;
+         margin-top: 1em;
+
+         img {
+            @include FullSize;
+            object-fit: cover;
+         }
+      }
+   }
+
+   @media (max-width: 1000px) {
+      section.products {
+         flex-direction: column;
+         position: relative;
+
+         aside.filters {
+            position: absolute;
+            left: 0;
+            top: 0;
+            min-width: 100vw;
+            width: 50%;
+            z-index: 99;
+            background: white;
+            height: auto;
+            transform: translateX(-100%);
+
+            span.arrow {
+               display: block;
+            }
+         }
+
+         section.products-section {
+            width: 100%;
+
+            section.products-container {
+               article.product {
+                  flex-direction: column;
+
+                  h5.price {
+                     margin: .5em 0 1em 0;
+                  }
+
+                  section.tags {
+                     min-width: auto;
+                  }
+
+                  figure { margin: 0 auto; }
+
+                  section.text-wrap { padding: .75em }
+               }
+            }
+         }
+      }
+   }
+
+   @media (max-width: 480px) {
+      section.products {
+         section.products-section {
+            section.products-container {
+               article.product {
+                  section.tags {
+                     flex-direction: column;
+
+                     span { width: 100%; }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
